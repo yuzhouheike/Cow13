@@ -16,10 +16,7 @@
 		C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2501D0121760050D58E /* LaunchScreen.storyboard */; };
 		C64CD25D1D0121770050D58E /* Cow13Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD25C1D0121770050D58E /* Cow13Tests.m */; };
 		C64CD2681D0121770050D58E /* Cow13UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2671D0121770050D58E /* Cow13UITests.m */; };
-		C64CD2851D0130350050D58E /* 懂你 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2811D0130350050D58E /* 懂你 */; };
-		C64CD2861D0130350050D58E /* 懂生活 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2821D0130350050D58E /* 懂生活 */; };
-		C64CD2871D0130350050D58E /* 懂心 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2831D0130350050D58E /* 懂心 */; };
-		C64CD2881D0130350050D58E /* 我的 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2841D0130350050D58E /* 我的 */; };
+		C6AB1A711D0178E100066403 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A701D0178E100066403 /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +56,8 @@
 		C64CD2671D0121770050D58E /* Cow13UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow13UITests.m; sourceTree = "<group>"; };
 		C64CD2691D0121770050D58E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C64CD2751D012DDE0050D58E /* Cow13.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cow13.pch; sourceTree = "<group>"; };
-		C64CD2811D0130350050D58E /* 懂你 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂你"; sourceTree = "<group>"; };
-		C64CD2821D0130350050D58E /* 懂生活 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂生活"; sourceTree = "<group>"; };
-		C64CD2831D0130350050D58E /* 懂心 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂心"; sourceTree = "<group>"; };
-		C64CD2841D0130350050D58E /* 我的 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "我的"; sourceTree = "<group>"; };
+		C6AB1A6F1D0178E100066403 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		C6AB1A701D0178E100066403 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,10 +168,12 @@
 				C64CD2461D0121760050D58E /* AppDelegate.m */,
 				C64CD2481D0121760050D58E /* ViewController.h */,
 				C64CD2491D0121760050D58E /* ViewController.m */,
-				C64CD2811D0130350050D58E /* 懂你 */,
-				C64CD2821D0130350050D58E /* 懂生活 */,
-				C64CD2831D0130350050D58E /* 懂心 */,
-				C64CD2841D0130350050D58E /* 我的 */,
+				C6AB1A6F1D0178E100066403 /* TabBarController.h */,
+				C6AB1A701D0178E100066403 /* TabBarController.m */,
+				C6AB1A651D016FFB00066403 /* 懂心 */,
+				C6AB1A641D016FEF00066403 /* 懂你 */,
+				C6AB1A661D01702900066403 /* 懂生活 */,
+				C6AB1A631D016FE400066403 /* 我的 */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -192,6 +189,98 @@
 				C64CD2531D0121760050D58E /* Info.plist */,
 			);
 			name = support;
+			sourceTree = "<group>";
+		};
+		C6AB1A631D016FE400066403 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB1A6E1D01707E00066403 /* View */,
+				C6AB1A6D1D01707400066403 /* Model */,
+			);
+			name = "我的";
+			sourceTree = "<group>";
+		};
+		C6AB1A641D016FEF00066403 /* 懂你 */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB1A6C1D01706D00066403 /* View */,
+				C6AB1A6B1D01706600066403 /* Model */,
+			);
+			name = "懂你";
+			sourceTree = "<group>";
+		};
+		C6AB1A651D016FFB00066403 /* 懂心 */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB1A6A1D01705F00066403 /* Model */,
+				C6AB1A691D01705800066403 /* View */,
+			);
+			name = "懂心";
+			sourceTree = "<group>";
+		};
+		C6AB1A661D01702900066403 /* 懂生活 */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB1A681D01704300066403 /* View */,
+				C6AB1A671D01703A00066403 /* Model */,
+			);
+			name = "懂生活";
+			sourceTree = "<group>";
+		};
+		C6AB1A671D01703A00066403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6AB1A681D01704300066403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6AB1A691D01705800066403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6AB1A6A1D01705F00066403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6AB1A6B1D01706600066403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6AB1A6C1D01706D00066403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6AB1A6D1D01707400066403 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6AB1A6E1D01707E00066403 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +348,7 @@
 		C64CD2371D0121760050D58E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "风暴科技";
 				TargetAttributes = {
@@ -301,13 +391,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C64CD2851D0130350050D58E /* 懂你 in Resources */,
 				C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */,
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
-				C64CD2861D0130350050D58E /* 懂生活 in Resources */,
 				C64CD24D1D0121760050D58E /* Main.storyboard in Resources */,
-				C64CD2871D0130350050D58E /* 懂心 in Resources */,
-				C64CD2881D0130350050D58E /* 我的 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C64CD24A1D0121760050D58E /* ViewController.m in Sources */,
+				C6AB1A711D0178E100066403 /* TabBarController.m in Sources */,
 				C64CD2471D0121760050D58E /* AppDelegate.m in Sources */,
 				C64CD2441D0121760050D58E /* main.m in Sources */,
 			);
