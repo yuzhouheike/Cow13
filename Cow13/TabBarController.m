@@ -54,7 +54,17 @@
       
     }
     
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+                                                        NSForegroundColorAttributeName : [UIColor grayColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+                                                        NSForegroundColorAttributeName : RGB(65, 179, 241)} forState:(UIControlStateSelected)];
+    
     self.viewControllers = controllersArray;
+    
+     self.selectedIndex = 0;//默认就是0
+    
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_back"];
 }
 
 /*

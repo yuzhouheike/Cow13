@@ -23,6 +23,7 @@
 		C6AB1A8D1D018A0A00066403 /* YouController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A8C1D018A0A00066403 /* YouController.m */; };
 		C6AB1A901D018A1700066403 /* LifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A8F1D018A1700066403 /* LifeController.m */; };
 		C6AB1A931D018A2D00066403 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A921D018A2D00066403 /* MineController.m */; };
+		C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A961D01B8EF00066403 /* HeartScrollController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		C6AB1A8F1D018A1700066403 /* LifeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeController.m; sourceTree = "<group>"; };
 		C6AB1A911D018A2D00066403 /* MineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineController.h; sourceTree = "<group>"; };
 		C6AB1A921D018A2D00066403 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
+		C6AB1A951D01B8EF00066403 /* HeartScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartScrollController.h; sourceTree = "<group>"; };
+		C6AB1A961D01B8EF00066403 /* HeartScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartScrollController.m; sourceTree = "<group>"; };
 		E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,8 +193,8 @@
 				C6AB1A771D0181BB00066403 /* BaseViewController.h */,
 				C6AB1A781D0181BB00066403 /* BaseViewController.m */,
 				C6AB1A751D017EDA00066403 /* Controllers.plist */,
-				C6AB1A651D016FFB00066403 /* 懂心 */,
 				C6AB1A641D016FEF00066403 /* 懂你 */,
+				C6AB1A651D016FFB00066403 /* 懂心 */,
 				C6AB1A661D01702900066403 /* 懂生活 */,
 				C6AB1A631D016FE400066403 /* 我的 */,
 			);
@@ -236,6 +239,7 @@
 		C6AB1A651D016FFB00066403 /* 懂心 */ = {
 			isa = PBXGroup;
 			children = (
+				C6AB1A941D01B8AB00066403 /* 轮播图 */,
 				C6AB1A6A1D01705F00066403 /* Model */,
 				C6AB1A691D01705800066403 /* View */,
 				C6AB1A881D0189FE00066403 /* HeartController.h */,
@@ -309,6 +313,15 @@
 			children = (
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C6AB1A941D01B8AB00066403 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				C6AB1A951D01B8EF00066403 /* HeartScrollController.h */,
+				C6AB1A961D01B8EF00066403 /* HeartScrollController.m */,
+			);
+			name = "轮播图";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,6 +517,7 @@
 				C64CD2441D0121760050D58E /* main.m in Sources */,
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,
 				C6AB1A7B1D0185DF00066403 /* Foundation+Log.m in Sources */,
+				C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

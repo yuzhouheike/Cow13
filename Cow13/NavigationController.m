@@ -21,7 +21,7 @@
     // 获取UINavigationBar
     UINavigationBar *navBar = [UINavigationBar appearance];
     // 设置navBar背景图片
-//    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_backImage"] forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_backImage"] forBarMetrics:UIBarMetricsDefault];
     //设置nav是否为半透明或者透明
     //    navBar.translucent = NO;
     // 设置navBar的背景颜色

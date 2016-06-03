@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>ControllerName</key>
-		<string>HeartController</string>
+		<string>YouController</string>
 		<key>ControllerTitle</key>
-		<string>懂心</string>
+		<string>懂你</string>
 		<key>TabbarSelectImage</key>
 		<string>wll1</string>
 		<key>TabbarDiselectImage</key>
@@ -14,9 +14,9 @@
 	</dict>
 	<dict>
 		<key>ControllerName</key>
-		<string>YouController</string>
+		<string>HeartController</string>
 		<key>ControllerTitle</key>
-		<string>懂你</string>
+		<string>懂心</string>
 		<key>TabbarSelectImage</key>
 		<string>wll1</string>
 		<key>TabbarDiselectImage</key>

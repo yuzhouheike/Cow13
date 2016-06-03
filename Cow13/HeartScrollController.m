@@ -1,27 +1,27 @@
 //
-//  MineController.m
+//  HeartScrollController.m
 //  Cow13
 //
 //  Created by 王磊磊 on 16/6/3.
 //  Copyright © 2016年 风暴科技. All rights reserved.
 //
 
-#import "MineController.h"
+#import "HeartScrollController.h"
 
-@interface MineController ()
-
-@property (nonatomic, strong) UITableView *tableView;
-
-@property (nonatomic, strong) NSArray *array;
+@interface HeartScrollController ()
 
 @end
 
-@implementation MineController
+@implementation HeartScrollController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = RandomColor;
+    
+    self.title = @"这是点进图片的视图控制器";
+    
 }
 
 - (void)didReceiveMemoryWarning {
