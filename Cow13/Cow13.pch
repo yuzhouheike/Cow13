@@ -10,6 +10,10 @@
 #define Cow13_pch
 
 #define RGB(r,g,b)   [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+
+#define RandomColor RGB(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+
 #define WS(weakSelf) __unsafe_unretained __typeof(&*self)weakSelf = self;
 #define mas_equalTo(...)                 equalTo(MASBoxValue((__VA_ARGS__)))
 #define mas_offset(...)                  valueOffset(MASBoxValue((__VA_ARGS__)))
