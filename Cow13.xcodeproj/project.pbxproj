@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75105C3296267B38292430DC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 626E27F226F965C5B103F56E /* libPods.a */; };
 		C64CD2441D0121760050D58E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2431D0121760050D58E /* main.m */; };
 		C64CD2471D0121760050D58E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2461D0121760050D58E /* AppDelegate.m */; };
 		C64CD24A1D0121760050D58E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2491D0121760050D58E /* ViewController.m */; };
@@ -15,6 +16,10 @@
 		C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2501D0121760050D58E /* LaunchScreen.storyboard */; };
 		C64CD25D1D0121770050D58E /* Cow13Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD25C1D0121770050D58E /* Cow13Tests.m */; };
 		C64CD2681D0121770050D58E /* Cow13UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2671D0121770050D58E /* Cow13UITests.m */; };
+		C64CD2851D0130350050D58E /* 懂你 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2811D0130350050D58E /* 懂你 */; };
+		C64CD2861D0130350050D58E /* 懂生活 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2821D0130350050D58E /* 懂生活 */; };
+		C64CD2871D0130350050D58E /* 懂心 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2831D0130350050D58E /* 懂心 */; };
+		C64CD2881D0130350050D58E /* 我的 in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2841D0130350050D58E /* 我的 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		626E27F226F965C5B103F56E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FF4E9B940A18DAA790211D9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C64CD23F1D0121760050D58E /* Cow13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cow13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64CD2431D0121760050D58E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C64CD2451D0121760050D58E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +58,12 @@
 		C64CD2631D0121770050D58E /* Cow13UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Cow13UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C64CD2671D0121770050D58E /* Cow13UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow13UITests.m; sourceTree = "<group>"; };
 		C64CD2691D0121770050D58E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64CD2751D012DDE0050D58E /* Cow13.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cow13.pch; sourceTree = "<group>"; };
+		C64CD2811D0130350050D58E /* 懂你 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂你"; sourceTree = "<group>"; };
+		C64CD2821D0130350050D58E /* 懂生活 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂生活"; sourceTree = "<group>"; };
+		C64CD2831D0130350050D58E /* 懂心 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "懂心"; sourceTree = "<group>"; };
+		C64CD2841D0130350050D58E /* 我的 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "我的"; sourceTree = "<group>"; };
+		E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75105C3296267B38292430DC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +92,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		135334BE58A931DF7105CD5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				626E27F226F965C5B103F56E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64F049C1CFCD13C4465023B4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */,
+				8FF4E9B940A18DAA790211D9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C64CD2361D0121760050D58E = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +116,8 @@
 				C64CD25B1D0121770050D58E /* Cow13Tests */,
 				C64CD2661D0121770050D58E /* Cow13UITests */,
 				C64CD2401D0121760050D58E /* Products */,
+				64F049C1CFCD13C4465023B4 /* Pods */,
+				135334BE58A931DF7105CD5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,15 +134,8 @@
 		C64CD2411D0121760050D58E /* Cow13 */ = {
 			isa = PBXGroup;
 			children = (
-				C64CD2451D0121760050D58E /* AppDelegate.h */,
-				C64CD2461D0121760050D58E /* AppDelegate.m */,
-				C64CD2481D0121760050D58E /* ViewController.h */,
-				C64CD2491D0121760050D58E /* ViewController.m */,
-				C64CD24B1D0121760050D58E /* Main.storyboard */,
-				C64CD24E1D0121760050D58E /* Assets.xcassets */,
-				C64CD2501D0121760050D58E /* LaunchScreen.storyboard */,
-				C64CD2531D0121760050D58E /* Info.plist */,
-				C64CD2421D0121760050D58E /* Supporting Files */,
+				C64CD2761D012EE00050D58E /* Class */,
+				C64CD2771D012EF20050D58E /* support */,
 			);
 			path = Cow13;
 			sourceTree = "<group>";
@@ -140,6 +166,34 @@
 			path = Cow13UITests;
 			sourceTree = "<group>";
 		};
+		C64CD2761D012EE00050D58E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				C64CD2451D0121760050D58E /* AppDelegate.h */,
+				C64CD2461D0121760050D58E /* AppDelegate.m */,
+				C64CD2481D0121760050D58E /* ViewController.h */,
+				C64CD2491D0121760050D58E /* ViewController.m */,
+				C64CD2811D0130350050D58E /* 懂你 */,
+				C64CD2821D0130350050D58E /* 懂生活 */,
+				C64CD2831D0130350050D58E /* 懂心 */,
+				C64CD2841D0130350050D58E /* 我的 */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		C64CD2771D012EF20050D58E /* support */ = {
+			isa = PBXGroup;
+			children = (
+				C64CD2421D0121760050D58E /* Supporting Files */,
+				C64CD2751D012DDE0050D58E /* Cow13.pch */,
+				C64CD24B1D0121760050D58E /* Main.storyboard */,
+				C64CD24E1D0121760050D58E /* Assets.xcassets */,
+				C64CD2501D0121760050D58E /* LaunchScreen.storyboard */,
+				C64CD2531D0121760050D58E /* Info.plist */,
+			);
+			name = support;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C64CD26C1D0121770050D58E /* Build configuration list for PBXNativeTarget "Cow13" */;
 			buildPhases = (
+				CAE9186032C352A8F53BD3B3 /* Check Pods Manifest.lock */,
 				C64CD23B1D0121760050D58E /* Sources */,
 				C64CD23C1D0121760050D58E /* Frameworks */,
 				C64CD23D1D0121760050D58E /* Resources */,
+				DAA6DC76DABECE609C6A787A /* Embed Pods Frameworks */,
+				899521C2CCAE9E8C432BB284 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -207,6 +264,7 @@
 				TargetAttributes = {
 					C64CD23E1D0121760050D58E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 22HQ9Y68JF;
 					};
 					C64CD2571D0121770050D58E = {
 						CreatedOnToolsVersion = 7.2;
@@ -243,9 +301,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64CD2851D0130350050D58E /* 懂你 in Resources */,
 				C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */,
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
+				C64CD2861D0130350050D58E /* 懂生活 in Resources */,
 				C64CD24D1D0121760050D58E /* Main.storyboard in Resources */,
+				C64CD2871D0130350050D58E /* 懂心 in Resources */,
+				C64CD2881D0130350050D58E /* 我的 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +326,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		899521C2CCAE9E8C432BB284 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE9186032C352A8F53BD3B3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA6DC76DABECE609C6A787A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C64CD23B1D0121760050D58E /* Sources */ = {
@@ -411,23 +521,33 @@
 		};
 		C64CD26D1D0121770050D58E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cow13/Cow13.pch";
 				INFOPLIST_FILE = Cow13/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stormTechnology.Cow13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Debug;
 		};
 		C64CD26E1D0121770050D58E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FF4E9B940A18DAA790211D9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Cow13/Cow13.pch";
 				INFOPLIST_FILE = Cow13/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stormTechnology.Cow13;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 			};
 			name = Release;
 		};
@@ -498,6 +618,7 @@
 				C64CD26E1D0121770050D58E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C64CD26F1D0121770050D58E /* Build configuration list for PBXNativeTarget "Cow13Tests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +627,7 @@
 				C64CD2711D0121770050D58E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C64CD2721D0121770050D58E /* Build configuration list for PBXNativeTarget "Cow13UITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +636,7 @@
 				C64CD2741D0121770050D58E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,22 @@
+//
+//  Cow13.pch
+//  Cow13
+//
+//  Created by 王磊磊 on 16/6/3.
+//  Copyright © 2016年 风暴科技. All rights reserved.
+//
+
+#ifndef Cow13_pch
+#define Cow13_pch
+
+#define RGB(r,g,b)   [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define WS(weakSelf) __unsafe_unretained __typeof(&*self)weakSelf = self;
+#define mas_equalTo(...)                 equalTo(MASBoxValue((__VA_ARGS__)))
+#define mas_offset(...)                  valueOffset(MASBoxValue((__VA_ARGS__)))
+#define equalTo(...)                     mas_equalTo(__VA_ARGS__)
+#define offset(...)                      mas_offset(__VA_ARGS__)
+#define VIEW_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define VIEW_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
+
+#endif /* Cow13_pch */
