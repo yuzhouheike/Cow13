@@ -48,7 +48,12 @@
         [demoContainerView addSubview:cycleScrollView3];
     
 
-    
+    [self getDataFromSever:@"?service=Wuser.Login&username=test&password=2535262wll" parameter:nil isSuccess:^(NSURLSessionDataTask *task, id project) {
+        
+        NSLog(@"%@", project);
+    } isError:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated

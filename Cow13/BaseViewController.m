@@ -10,8 +10,8 @@
 #import <objc/runtime.h>
 
 
-static NSString * const BaseURLString = @"http://123.57.141.249:8080/beautalk/";//
-//static NSString * const BaseURLString = @"http://192.57.141.249:8080/beautalk/";
+//static NSString * const BaseURLString = @"http://123.57.141.249:8080/beautalk/";//
+static NSString * const BaseURLString = @"http://127.0.0.1/";
 
 @implementation AFNetworkingClient
 
@@ -23,7 +23,7 @@ static NSString * const BaseURLString = @"http://123.57.141.249:8080/beautalk/";
     dispatch_once(&onceToken, ^{
         sharedClient = [[AFNetworkingClient alloc]initWithBaseURL:[NSURL URLWithString:BaseURLString]];
         sharedClient.responseSerializer = [AFJSONResponseSerializer serializer];
-        sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/plain"];
+        sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"application/json"];
     });
     
     return sharedClient;
