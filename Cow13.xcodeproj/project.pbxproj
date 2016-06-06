@@ -24,6 +24,8 @@
 		C6AB1A901D018A1700066403 /* LifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A8F1D018A1700066403 /* LifeController.m */; };
 		C6AB1A931D018A2D00066403 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A921D018A2D00066403 /* MineController.m */; };
 		C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A961D01B8EF00066403 /* HeartScrollController.m */; };
+		C6C17F8B1D05ABD700F6AAA9 /* CustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */; };
+		C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */; };
 		C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF8A1D0520D2001FF0D4 /* EatController.m */; };
 		C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E7FF8E1D05227B001FF0D4 /* You.plist */; };
 		C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF9B1D055852001FF0D4 /* FieldController.m */; };
@@ -88,6 +90,10 @@
 		C6AB1A921D018A2D00066403 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		C6AB1A951D01B8EF00066403 /* HeartScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartScrollController.h; sourceTree = "<group>"; };
 		C6AB1A961D01B8EF00066403 /* HeartScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartScrollController.m; sourceTree = "<group>"; };
+		C6C17F891D05ABD700F6AAA9 /* CustomTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTabbar.h; sourceTree = "<group>"; };
+		C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbar.m; sourceTree = "<group>"; };
+		C6C17F8D1D05AE4200F6AAA9 /* UIView+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extention.h"; sourceTree = "<group>"; };
+		C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extention.m"; sourceTree = "<group>"; };
 		C6E7FF891D0520D2001FF0D4 /* EatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatController.h; sourceTree = "<group>"; };
 		C6E7FF8A1D0520D2001FF0D4 /* EatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatController.m; sourceTree = "<group>"; };
 		C6E7FF8E1D05227B001FF0D4 /* You.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = You.plist; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 		C64CD2761D012EE00050D58E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				C6C17F8C1D05AE0E00F6AAA9 /* others */,
+				C6C17F871D05AB8F00F6AAA9 /* added */,
 				C64CD2451D0121760050D58E /* AppDelegate.h */,
 				C64CD2461D0121760050D58E /* AppDelegate.m */,
 				C6AB1A721D017C9500066403 /* NavigationController.h */,
@@ -352,6 +360,32 @@
 				C6AB1A961D01B8EF00066403 /* HeartScrollController.m */,
 			);
 			name = "轮播图点击进去的测试";
+			sourceTree = "<group>";
+		};
+		C6C17F871D05AB8F00F6AAA9 /* added */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17F881D05ABA000F6AAA9 /* View */,
+			);
+			name = added;
+			sourceTree = "<group>";
+		};
+		C6C17F881D05ABA000F6AAA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17F891D05ABD700F6AAA9 /* CustomTabbar.h */,
+				C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6C17F8C1D05AE0E00F6AAA9 /* others */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17F8D1D05AE4200F6AAA9 /* UIView+Extention.h */,
+				C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */,
+			);
+			name = others;
 			sourceTree = "<group>";
 		};
 		C6E7FF881D0520BA001FF0D4 /* 吃 */ = {
@@ -755,6 +789,7 @@
 				C6E7FFC21D057376001FF0D4 /* MultitedChipController.m in Sources */,
 				C6AB1A8D1D018A0A00066403 /* YouController.m in Sources */,
 				C64CD2471D0121760050D58E /* AppDelegate.m in Sources */,
+				C6C17F8B1D05ABD700F6AAA9 /* CustomTabbar.m in Sources */,
 				C6AB1A8A1D0189FE00066403 /* HeartController.m in Sources */,
 				C64CD2441D0121760050D58E /* main.m in Sources */,
 				C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */,
@@ -762,6 +797,7 @@
 				C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */,
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,
 				C6AB1A7B1D0185DF00066403 /* Foundation+Log.m in Sources */,
+				C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */,
 				C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */,
 				C6E7FFA91D055EEC001FF0D4 /* HomeController.m in Sources */,
 				C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */,

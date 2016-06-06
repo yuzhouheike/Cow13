@@ -8,7 +8,7 @@
 
 #import "TabBarController.h"
 #import "NavigationController.h"
-
+#import "CustomTabbar.h"
 @interface TabBarController ()
 
 @property (nonatomic, strong) NSArray *cotrollerArray;
@@ -65,6 +65,8 @@
      self.selectedIndex = 0;//默认就是0
     
     self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
+    
+    [self setValue:[CustomTabbar new] forKey:@"tabBar"];
 }
 
 /*
