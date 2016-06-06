@@ -32,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"%@", self.cotrollerArray);
+//    NSLog(@"%@", self.cotrollerArray);
     
     NSMutableArray *controllersArray = [NSMutableArray arrayWithCapacity:self.cotrollerArray.count];
     
