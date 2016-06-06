@@ -8,9 +8,15 @@
 
 #import "YouController.h"
 #import "SDCycleScrollView.h"
+#import "EatController.h"
+
 @interface YouController ()<SDCycleScrollViewDelegate>
 // button 吃 玩 劳 用 帮
 @property (nonatomic, strong) UIButton *button;
+// controllers的名字
+@property (nonatomic, strong) NSArray *controllersArray;
+
+@property (nonatomic, strong) NSMutableArray *array;
 
 @end
 
@@ -25,6 +31,56 @@
     
 }
 
+- (NSMutableArray *)array {
+    
+    if (!_array) {
+        _array = [NSMutableArray array];
+    }
+    return _array;
+}
+- (NSArray *)controllersArray {
+    
+    if (!_controllersArray) {
+        
+        
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"You" ofType:@"plist"];
+        _controllersArray = [NSArray arrayWithContentsOfFile:filePath];
+        
+        for (NSDictionary *dict in _controllersArray) {
+            
+            UIViewController *vc = [NSClassFromString(dict[@"controllerName"]) new];
+            vc.title = dict[@"title"];
+            
+            [self.array addObject:vc];
+        }
+    }
+
+ 
+    
+    return _controllersArray;
+}
+
+- (void) doAction:(UIButton *)button {
+    
+    
+//    NSLog(@"%@ title : %@", @(button.tag), button.titleLabel.text);
+    
+//      = [NSMutableArray arrayWithCapacity:self.controllersArray.count];
+    
+  
+    NSLog(@"%ld", button.tag);
+    
+    
+//    [self.navigationController pushViewController:(self.array[button.tag] - 100) animated:YES];
+    
+    
+//    [self.navigationController pushViewController:controllersArray[button.tag - 100] animated:YES];
+   
+   
+
+}
+
+#pragma 设置UI界面 吃 玩 劳 用 帮
 - (void) setupUI {
     
     
@@ -55,22 +111,5 @@
     }
 }
 
-- (void) doAction:(UIButton *)button {
-    
-    
-    NSLog(@"%@ title : %@", @(button.tag), button.titleLabel.text);
-    
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

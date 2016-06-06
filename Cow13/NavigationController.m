@@ -21,17 +21,17 @@
     // 获取UINavigationBar
     UINavigationBar *navBar = [UINavigationBar appearance];
     // 设置navBar背景图片
-    [navBar setBackgroundImage:[UIImage imageNamed:@"nav_backImage"] forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundImage:[UIImage imageNamed:@"navbackimage"] forBarMetrics:UIBarMetricsDefault];
     //设置nav是否为半透明或者透明
-    //    navBar.translucent = NO;
-    // 设置navBar的背景颜色
-    //    [navBar setBarTintColor:[UIColor whiteColor]];
+//        navBar.translucent = NO;
+//    // 设置navBar的背景颜色
+//        [navBar setBarTintColor:[UIColor whiteColor]];
 //    navBar.barTintColor = [UIColor whiteColor];
     // 设置导航栏标题颜色为白色
-//    [navBar setTitleTextAttributes:@{
-//                                     NSForegroundColorAttributeName : RGB(0, 0, 0),
-//                                     NSFontAttributeName : [UIFont boldSystemFontOfSize:20]
-//                                     }];
+    [navBar setTitleTextAttributes:@{
+                                     NSForegroundColorAttributeName : RGB(0, 0, 0),
+                                     NSFontAttributeName : [UIFont boldSystemFontOfSize:20]
+                                     }];
 }
 
 - (void)viewDidLoad {

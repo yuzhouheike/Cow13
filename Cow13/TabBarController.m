@@ -42,7 +42,7 @@
         
         UIViewController *viewController = [[viewControllerClass alloc] init];
         
-        viewController.title = dict[@"ControllerTitle"];
+        viewController.navigationItem.title = dict[@"ControllerTitle"];
         
         viewController.tabBarItem.selectedImage = [[UIImage imageNamed:dict[@"TabbarSelectImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
@@ -64,7 +64,7 @@
     
      self.selectedIndex = 0;//默认就是0
     
-    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_back"];
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
 }
 
 /*

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>吃</string>
+		<key>controllerName</key>
+		<string>EatController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>玩</string>
+		<key>controllerName</key>
+		<string>PlayController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>劳</string>
+		<key>controllerName</key>
+		<string>WorkController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>用</string>
+		<key>controllerName</key>
+		<string>UseController</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>帮</string>
+		<key>controllerName</key>
+		<string>HelpController</string>
+	</dict>
+</array>
+</plist>

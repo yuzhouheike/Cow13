@@ -4,43 +4,43 @@
 <array>
 	<dict>
 		<key>ControllerName</key>
-		<string>YouController</string>
+		<string>HomeController</string>
 		<key>ControllerTitle</key>
-		<string>懂你</string>
+		<string>首页</string>
 		<key>TabbarSelectImage</key>
-		<string>wll1</string>
+		<string>首页选中</string>
 		<key>TabbarDiselectImage</key>
-		<string>wll2</string>
+		<string>首页</string>
 	</dict>
 	<dict>
 		<key>ControllerName</key>
-		<string>HeartController</string>
+		<string>FieldController</string>
 		<key>ControllerTitle</key>
-		<string>懂心</string>
+		<string>领域</string>
 		<key>TabbarSelectImage</key>
-		<string>wll1</string>
+		<string>领域选中</string>
 		<key>TabbarDiselectImage</key>
-		<string>wll2</string>
+		<string>领域</string>
 	</dict>
 	<dict>
 		<key>ControllerName</key>
-		<string>LifeController</string>
+		<string>MessageController</string>
 		<key>ControllerTitle</key>
-		<string>懂生活</string>
+		<string>消息</string>
 		<key>TabbarSelectImage</key>
-		<string>wll1</string>
+		<string>消息选中</string>
 		<key>TabbarDiselectImage</key>
-		<string>wll2</string>
+		<string>消息</string>
 	</dict>
 	<dict>
 		<key>ControllerName</key>
 		<string>MineController</string>
 		<key>ControllerTitle</key>
-		<string>我的</string>
+		<string>个人中心</string>
 		<key>TabbarSelectImage</key>
-		<string>wll1</string>
+		<string>个人中心选中</string>
 		<key>TabbarDiselectImage</key>
-		<string>wll2</string>
+		<string>个人中心</string>
 	</dict>
 </array>
 </plist>

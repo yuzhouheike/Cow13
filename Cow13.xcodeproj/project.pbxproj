@@ -24,6 +24,16 @@
 		C6AB1A901D018A1700066403 /* LifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A8F1D018A1700066403 /* LifeController.m */; };
 		C6AB1A931D018A2D00066403 /* MineController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A921D018A2D00066403 /* MineController.m */; };
 		C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A961D01B8EF00066403 /* HeartScrollController.m */; };
+		C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF8A1D0520D2001FF0D4 /* EatController.m */; };
+		C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E7FF8E1D05227B001FF0D4 /* You.plist */; };
+		C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF9B1D055852001FF0D4 /* FieldController.m */; };
+		C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFA01D055886001FF0D4 /* MessageController.m */; };
+		C6E7FFA91D055EEC001FF0D4 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFA71D055EEC001FF0D4 /* HomeController.m */; };
+		C6E7FFAA1D055EEC001FF0D4 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6E7FFA81D055EEC001FF0D4 /* HomeController.xib */; };
+		C6E7FFB01D05723C001FF0D4 /* ForumController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFAF1D05723C001FF0D4 /* ForumController.m */; };
+		C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFB51D057292001FF0D4 /* PreferentialController.m */; };
+		C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFBB1D0572C9001FF0D4 /* CustomServiceController.m */; };
+		C6E7FFC21D057376001FF0D4 /* MultitedChipController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFC11D057376001FF0D4 /* MultitedChipController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +88,24 @@
 		C6AB1A921D018A2D00066403 /* MineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineController.m; sourceTree = "<group>"; };
 		C6AB1A951D01B8EF00066403 /* HeartScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartScrollController.h; sourceTree = "<group>"; };
 		C6AB1A961D01B8EF00066403 /* HeartScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartScrollController.m; sourceTree = "<group>"; };
+		C6E7FF891D0520D2001FF0D4 /* EatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatController.h; sourceTree = "<group>"; };
+		C6E7FF8A1D0520D2001FF0D4 /* EatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatController.m; sourceTree = "<group>"; };
+		C6E7FF8E1D05227B001FF0D4 /* You.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = You.plist; sourceTree = "<group>"; };
+		C6E7FF9A1D055852001FF0D4 /* FieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldController.h; sourceTree = "<group>"; };
+		C6E7FF9B1D055852001FF0D4 /* FieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldController.m; sourceTree = "<group>"; };
+		C6E7FF9F1D055886001FF0D4 /* MessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageController.h; sourceTree = "<group>"; };
+		C6E7FFA01D055886001FF0D4 /* MessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageController.m; sourceTree = "<group>"; };
+		C6E7FFA61D055EEC001FF0D4 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		C6E7FFA71D055EEC001FF0D4 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		C6E7FFA81D055EEC001FF0D4 /* HomeController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		C6E7FFAE1D05723C001FF0D4 /* ForumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForumController.h; sourceTree = "<group>"; };
+		C6E7FFAF1D05723C001FF0D4 /* ForumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForumController.m; sourceTree = "<group>"; };
+		C6E7FFB41D057292001FF0D4 /* PreferentialController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferentialController.h; sourceTree = "<group>"; };
+		C6E7FFB51D057292001FF0D4 /* PreferentialController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferentialController.m; sourceTree = "<group>"; };
+		C6E7FFBA1D0572C9001FF0D4 /* CustomServiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomServiceController.h; sourceTree = "<group>"; };
+		C6E7FFBB1D0572C9001FF0D4 /* CustomServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomServiceController.m; sourceTree = "<group>"; };
+		C6E7FFC01D057376001FF0D4 /* MultitedChipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultitedChipController.h; sourceTree = "<group>"; };
+		C6E7FFC11D057376001FF0D4 /* MultitedChipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultitedChipController.m; sourceTree = "<group>"; };
 		E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,10 +221,10 @@
 				C6AB1A771D0181BB00066403 /* BaseViewController.h */,
 				C6AB1A781D0181BB00066403 /* BaseViewController.m */,
 				C6AB1A751D017EDA00066403 /* Controllers.plist */,
-				C6AB1A641D016FEF00066403 /* 懂你 */,
-				C6AB1A651D016FFB00066403 /* 懂心 */,
-				C6AB1A661D01702900066403 /* 懂生活 */,
-				C6AB1A631D016FE400066403 /* 我的 */,
+				C6E7FF901D054244001FF0D4 /* 首页 */,
+				C6E7FF921D05576E001FF0D4 /* 领域 */,
+				C6E7FF911D05427B001FF0D4 /* 消息 */,
+				C6AB1A631D016FE400066403 /* 个人中心 */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -214,7 +242,7 @@
 			name = support;
 			sourceTree = "<group>";
 		};
-		C6AB1A631D016FE400066403 /* 我的 */ = {
+		C6AB1A631D016FE400066403 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
 				C6AB1A6E1D01707E00066403 /* View */,
@@ -222,16 +250,18 @@
 				C6AB1A911D018A2D00066403 /* MineController.h */,
 				C6AB1A921D018A2D00066403 /* MineController.m */,
 			);
-			name = "我的";
+			name = "个人中心";
 			sourceTree = "<group>";
 		};
 		C6AB1A641D016FEF00066403 /* 懂你 */ = {
 			isa = PBXGroup;
 			children = (
+				C6E7FF881D0520BA001FF0D4 /* 吃 */,
 				C6AB1A6C1D01706D00066403 /* View */,
 				C6AB1A6B1D01706600066403 /* Model */,
 				C6AB1A8B1D018A0A00066403 /* YouController.h */,
 				C6AB1A8C1D018A0A00066403 /* YouController.m */,
+				C6E7FF8E1D05227B001FF0D4 /* You.plist */,
 			);
 			name = "懂你";
 			sourceTree = "<group>";
@@ -239,7 +269,7 @@
 		C6AB1A651D016FFB00066403 /* 懂心 */ = {
 			isa = PBXGroup;
 			children = (
-				C6AB1A941D01B8AB00066403 /* 轮播图 */,
+				C6AB1A941D01B8AB00066403 /* 轮播图点击进去的测试 */,
 				C6AB1A6A1D01705F00066403 /* Model */,
 				C6AB1A691D01705800066403 /* View */,
 				C6AB1A881D0189FE00066403 /* HeartController.h */,
@@ -315,13 +345,221 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		C6AB1A941D01B8AB00066403 /* 轮播图 */ = {
+		C6AB1A941D01B8AB00066403 /* 轮播图点击进去的测试 */ = {
 			isa = PBXGroup;
 			children = (
 				C6AB1A951D01B8EF00066403 /* HeartScrollController.h */,
 				C6AB1A961D01B8EF00066403 /* HeartScrollController.m */,
 			);
-			name = "轮播图";
+			name = "轮播图点击进去的测试";
+			sourceTree = "<group>";
+		};
+		C6E7FF881D0520BA001FF0D4 /* 吃 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FF8D1D0520FD001FF0D4 /* Model */,
+				C6E7FF8C1D0520F7001FF0D4 /* view */,
+				C6E7FF891D0520D2001FF0D4 /* EatController.h */,
+				C6E7FF8A1D0520D2001FF0D4 /* EatController.m */,
+			);
+			name = "吃";
+			sourceTree = "<group>";
+		};
+		C6E7FF8C1D0520F7001FF0D4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		C6E7FF8D1D0520FD001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FF901D054244001FF0D4 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFBD1D0572CF001FF0D4 /* 重筹 */,
+				C6E7FFB71D0572A2001FF0D4 /* 客服 */,
+				C6E7FFB11D057267001FF0D4 /* 优惠 */,
+				C6E7FFAB1D0571FD001FF0D4 /* 论坛 */,
+				C6AB1A661D01702900066403 /* 懂生活 */,
+				C6AB1A651D016FFB00066403 /* 懂心 */,
+				C6AB1A641D016FEF00066403 /* 懂你 */,
+				C6E7FF941D0557AF001FF0D4 /* Model */,
+				C6E7FF931D05579B001FF0D4 /* View */,
+			);
+			name = "首页";
+			sourceTree = "<group>";
+		};
+		C6E7FF911D05427B001FF0D4 /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FF9D1D055861001FF0D4 /* Model */,
+				C6E7FF9E1D055872001FF0D4 /* View */,
+				C6E7FF9F1D055886001FF0D4 /* MessageController.h */,
+				C6E7FFA01D055886001FF0D4 /* MessageController.m */,
+			);
+			name = "消息";
+			sourceTree = "<group>";
+		};
+		C6E7FF921D05576E001FF0D4 /* 领域 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FF981D055805001FF0D4 /* Model */,
+				C6E7FF991D05580C001FF0D4 /* View */,
+				C6E7FF9A1D055852001FF0D4 /* FieldController.h */,
+				C6E7FF9B1D055852001FF0D4 /* FieldController.m */,
+			);
+			name = "领域";
+			sourceTree = "<group>";
+		};
+		C6E7FF931D05579B001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFA61D055EEC001FF0D4 /* HomeController.h */,
+				C6E7FFA71D055EEC001FF0D4 /* HomeController.m */,
+				C6E7FFA81D055EEC001FF0D4 /* HomeController.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FF941D0557AF001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FF981D055805001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FF991D05580C001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FF9D1D055861001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FF9E1D055872001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FFAB1D0571FD001FF0D4 /* 论坛 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFAD1D057216001FF0D4 /* View */,
+				C6E7FFAC1D05720F001FF0D4 /* Model */,
+				C6E7FFAE1D05723C001FF0D4 /* ForumController.h */,
+				C6E7FFAF1D05723C001FF0D4 /* ForumController.m */,
+			);
+			name = "论坛";
+			sourceTree = "<group>";
+		};
+		C6E7FFAC1D05720F001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FFAD1D057216001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FFB11D057267001FF0D4 /* 优惠 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFB31D057279001FF0D4 /* View */,
+				C6E7FFB21D057270001FF0D4 /* Model */,
+				C6E7FFB41D057292001FF0D4 /* PreferentialController.h */,
+				C6E7FFB51D057292001FF0D4 /* PreferentialController.m */,
+			);
+			name = "优惠";
+			sourceTree = "<group>";
+		};
+		C6E7FFB21D057270001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FFB31D057279001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FFB71D0572A2001FF0D4 /* 客服 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFB91D0572B4001FF0D4 /* View */,
+				C6E7FFB81D0572AE001FF0D4 /* Model */,
+				C6E7FFBA1D0572C9001FF0D4 /* CustomServiceController.h */,
+				C6E7FFBB1D0572C9001FF0D4 /* CustomServiceController.m */,
+			);
+			name = "客服";
+			sourceTree = "<group>";
+		};
+		C6E7FFB81D0572AE001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FFB91D0572B4001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6E7FFBD1D0572CF001FF0D4 /* 重筹 */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7FFBF1D0572E3001FF0D4 /* View */,
+				C6E7FFBE1D0572DC001FF0D4 /* Model */,
+				C6E7FFC01D057376001FF0D4 /* MultitedChipController.h */,
+				C6E7FFC11D057376001FF0D4 /* MultitedChipController.m */,
+			);
+			name = "重筹";
+			sourceTree = "<group>";
+		};
+		C6E7FFBE1D0572DC001FF0D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6E7FFBF1D0572E3001FF0D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,8 +670,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */,
 				C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */,
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
+				C6E7FFAA1D055EEC001FF0D4 /* HomeController.xib in Resources */,
 				C6AB1A761D017EDA00066403 /* Controllers.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,14 +749,22 @@
 			files = (
 				C6AB1A711D0178E100066403 /* TabBarController.m in Sources */,
 				C6AB1A791D0181BB00066403 /* BaseViewController.m in Sources */,
+				C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */,
 				C6AB1A901D018A1700066403 /* LifeController.m in Sources */,
 				C6AB1A741D017C9500066403 /* NavigationController.m in Sources */,
+				C6E7FFC21D057376001FF0D4 /* MultitedChipController.m in Sources */,
 				C6AB1A8D1D018A0A00066403 /* YouController.m in Sources */,
 				C64CD2471D0121760050D58E /* AppDelegate.m in Sources */,
 				C6AB1A8A1D0189FE00066403 /* HeartController.m in Sources */,
 				C64CD2441D0121760050D58E /* main.m in Sources */,
+				C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */,
+				C6E7FFB01D05723C001FF0D4 /* ForumController.m in Sources */,
+				C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */,
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,
 				C6AB1A7B1D0185DF00066403 /* Foundation+Log.m in Sources */,
+				C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */,
+				C6E7FFA91D055EEC001FF0D4 /* HomeController.m in Sources */,
+				C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */,
 				C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

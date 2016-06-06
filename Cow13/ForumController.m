@@ -1,27 +1,22 @@
 //
-//  MineController.m
+//  ForumController.m
 //  Cow13
 //
-//  Created by 王磊磊 on 16/6/3.
+//  Created by 王磊磊 on 16/6/6.
 //  Copyright © 2016年 风暴科技. All rights reserved.
 //
 
-#import "MineController.h"
+#import "ForumController.h"
 
-@interface MineController ()
-
-@property (nonatomic, strong) UITableView *tableView;
-
-@property (nonatomic, strong) NSArray *array;
+@interface ForumController ()
 
 @end
 
-@implementation MineController
+@implementation ForumController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 }
 
 - (void)didReceiveMemoryWarning {
