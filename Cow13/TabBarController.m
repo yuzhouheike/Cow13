@@ -62,7 +62,7 @@
     
     self.viewControllers = controllersArray;
     
-     self.selectedIndex = 0;//默认就是0
+     self.selectedIndex = 3;//默认就是0
     
     self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
     

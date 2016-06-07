@@ -27,8 +27,8 @@
         
         // 添加发布按钮
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [publishButton setBackgroundImage:[UIImage imageNamed:@"加号"] forState:UIControlStateNormal];
-        [publishButton setBackgroundImage:[UIImage imageNamed:@"加号"] forState:UIControlStateHighlighted];
+        [publishButton setBackgroundImage:[UIImage imageNamed:@"publishicon"] forState:UIControlStateNormal];
+        [publishButton setBackgroundImage:[UIImage imageNamed:@"pubishclickicon"] forState:UIControlStateHighlighted];
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
         publishButton.size = publishButton.currentBackgroundImage.size;
         [self addSubview:publishButton];
@@ -82,7 +82,7 @@
 - (void)buttonClick
 {
 //    // 发出一个通知
-    NSLog(@"ceshi");
+//    NSLog(@"ceshi");
 //    [XMGNoteCenter postNotificationName:XMGTabBarDidSelectNotification object:nil userInfo:nil];
 }
 /*

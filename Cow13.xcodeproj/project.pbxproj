@@ -26,6 +26,8 @@
 		C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A961D01B8EF00066403 /* HeartScrollController.m */; };
 		C6C17F8B1D05ABD700F6AAA9 /* CustomTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */; };
 		C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */; };
+		C6C17F911D065B5300F6AAA9 /* Mine.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C17F901D065B5300F6AAA9 /* Mine.plist */; };
+		C6C17F941D06601700F6AAA9 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F931D06601700F6AAA9 /* MineModel.m */; };
 		C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF8A1D0520D2001FF0D4 /* EatController.m */; };
 		C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E7FF8E1D05227B001FF0D4 /* You.plist */; };
 		C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF9B1D055852001FF0D4 /* FieldController.m */; };
@@ -94,6 +96,9 @@
 		C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTabbar.m; sourceTree = "<group>"; };
 		C6C17F8D1D05AE4200F6AAA9 /* UIView+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extention.h"; sourceTree = "<group>"; };
 		C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extention.m"; sourceTree = "<group>"; };
+		C6C17F901D065B5300F6AAA9 /* Mine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mine.plist; sourceTree = "<group>"; };
+		C6C17F921D06601700F6AAA9 /* MineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
+		C6C17F931D06601700F6AAA9 /* MineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		C6E7FF891D0520D2001FF0D4 /* EatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatController.h; sourceTree = "<group>"; };
 		C6E7FF8A1D0520D2001FF0D4 /* EatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatController.m; sourceTree = "<group>"; };
 		C6E7FF8E1D05227B001FF0D4 /* You.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = You.plist; sourceTree = "<group>"; };
@@ -257,6 +262,7 @@
 				C6AB1A6D1D01707400066403 /* Model */,
 				C6AB1A911D018A2D00066403 /* MineController.h */,
 				C6AB1A921D018A2D00066403 /* MineController.m */,
+				C6C17F901D065B5300F6AAA9 /* Mine.plist */,
 			);
 			name = "个人中心";
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 		C6AB1A6D1D01707400066403 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C6C17F921D06601700F6AAA9 /* MineModel.h */,
+				C6C17F931D06601700F6AAA9 /* MineModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -416,6 +424,9 @@
 		C6E7FF901D054244001FF0D4 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				C6E7FFA61D055EEC001FF0D4 /* HomeController.h */,
+				C6E7FFA71D055EEC001FF0D4 /* HomeController.m */,
+				C6E7FFA81D055EEC001FF0D4 /* HomeController.xib */,
 				C6E7FFBD1D0572CF001FF0D4 /* 重筹 */,
 				C6E7FFB71D0572A2001FF0D4 /* 客服 */,
 				C6E7FFB11D057267001FF0D4 /* 优惠 */,
@@ -454,9 +465,6 @@
 		C6E7FF931D05579B001FF0D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6E7FFA61D055EEC001FF0D4 /* HomeController.h */,
-				C6E7FFA71D055EEC001FF0D4 /* HomeController.m */,
-				C6E7FFA81D055EEC001FF0D4 /* HomeController.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -709,6 +717,7 @@
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
 				C6E7FFAA1D055EEC001FF0D4 /* HomeController.xib in Resources */,
 				C6AB1A761D017EDA00066403 /* Controllers.plist in Resources */,
+				C6C17F911D065B5300F6AAA9 /* Mine.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +794,7 @@
 				C6AB1A791D0181BB00066403 /* BaseViewController.m in Sources */,
 				C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */,
 				C6AB1A901D018A1700066403 /* LifeController.m in Sources */,
+				C6C17F941D06601700F6AAA9 /* MineModel.m in Sources */,
 				C6AB1A741D017C9500066403 /* NavigationController.m in Sources */,
 				C6E7FFC21D057376001FF0D4 /* MultitedChipController.m in Sources */,
 				C6AB1A8D1D018A0A00066403 /* YouController.m in Sources */,
