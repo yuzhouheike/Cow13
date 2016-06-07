@@ -28,6 +28,11 @@
 		C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */; };
 		C6C17F911D065B5300F6AAA9 /* Mine.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C17F901D065B5300F6AAA9 /* Mine.plist */; };
 		C6C17F941D06601700F6AAA9 /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F931D06601700F6AAA9 /* MineModel.m */; };
+		C6C17F9B1D06B44400F6AAA9 /* PleaseLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17F991D06B44400F6AAA9 /* PleaseLoginController.m */; };
+		C6C17F9C1D06B44400F6AAA9 /* PleaseLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6C17F9A1D06B44400F6AAA9 /* PleaseLoginController.xib */; };
+		C6C17F9E1D06BC4E00F6AAA9 /* MineLogin.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6C17F9D1D06BC4E00F6AAA9 /* MineLogin.plist */; };
+		C6C17FA21D06BFA000F6AAA9 /* MineLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17FA11D06BFA000F6AAA9 /* MineLoginController.m */; };
+		C6C17FA61D06C9AE00F6AAA9 /* UserMangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6C17FA51D06C9AE00F6AAA9 /* UserMangerController.m */; };
 		C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF8A1D0520D2001FF0D4 /* EatController.m */; };
 		C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6E7FF8E1D05227B001FF0D4 /* You.plist */; };
 		C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FF9B1D055852001FF0D4 /* FieldController.m */; };
@@ -99,6 +104,14 @@
 		C6C17F901D065B5300F6AAA9 /* Mine.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Mine.plist; sourceTree = "<group>"; };
 		C6C17F921D06601700F6AAA9 /* MineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
 		C6C17F931D06601700F6AAA9 /* MineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
+		C6C17F981D06B44400F6AAA9 /* PleaseLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PleaseLoginController.h; sourceTree = "<group>"; };
+		C6C17F991D06B44400F6AAA9 /* PleaseLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PleaseLoginController.m; sourceTree = "<group>"; };
+		C6C17F9A1D06B44400F6AAA9 /* PleaseLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PleaseLoginController.xib; sourceTree = "<group>"; };
+		C6C17F9D1D06BC4E00F6AAA9 /* MineLogin.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MineLogin.plist; sourceTree = "<group>"; };
+		C6C17FA01D06BFA000F6AAA9 /* MineLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineLoginController.h; sourceTree = "<group>"; };
+		C6C17FA11D06BFA000F6AAA9 /* MineLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineLoginController.m; sourceTree = "<group>"; };
+		C6C17FA41D06C9AE00F6AAA9 /* UserMangerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMangerController.h; sourceTree = "<group>"; };
+		C6C17FA51D06C9AE00F6AAA9 /* UserMangerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMangerController.m; sourceTree = "<group>"; };
 		C6E7FF891D0520D2001FF0D4 /* EatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EatController.h; sourceTree = "<group>"; };
 		C6E7FF8A1D0520D2001FF0D4 /* EatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EatController.m; sourceTree = "<group>"; };
 		C6E7FF8E1D05227B001FF0D4 /* You.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = You.plist; sourceTree = "<group>"; };
@@ -258,6 +271,9 @@
 		C6AB1A631D016FE400066403 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
+				C6C17F9F1D06BF8500F6AAA9 /* 登录成功界面 */,
+				C6C17F9D1D06BC4E00F6AAA9 /* MineLogin.plist */,
+				C6C17F951D06B3F900F6AAA9 /* 请求登录界面 */,
 				C6AB1A6E1D01707E00066403 /* View */,
 				C6AB1A6D1D01707400066403 /* Model */,
 				C6AB1A911D018A2D00066403 /* MineController.h */,
@@ -394,6 +410,51 @@
 				C6C17F8E1D05AE4200F6AAA9 /* UIView+Extention.m */,
 			);
 			name = others;
+			sourceTree = "<group>";
+		};
+		C6C17F951D06B3F900F6AAA9 /* 请求登录界面 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17F971D06B41B00F6AAA9 /* Model */,
+				C6C17F961D06B40E00F6AAA9 /* View */,
+				C6C17F981D06B44400F6AAA9 /* PleaseLoginController.h */,
+				C6C17F991D06B44400F6AAA9 /* PleaseLoginController.m */,
+				C6C17F9A1D06B44400F6AAA9 /* PleaseLoginController.xib */,
+			);
+			name = "请求登录界面";
+			sourceTree = "<group>";
+		};
+		C6C17F961D06B40E00F6AAA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C6C17F971D06B41B00F6AAA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C6C17F9F1D06BF8500F6AAA9 /* 登录成功界面 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17FA31D06C98A00F6AAA9 /* 账户管理界面 */,
+				C6C17FA01D06BFA000F6AAA9 /* MineLoginController.h */,
+				C6C17FA11D06BFA000F6AAA9 /* MineLoginController.m */,
+			);
+			name = "登录成功界面";
+			sourceTree = "<group>";
+		};
+		C6C17FA31D06C98A00F6AAA9 /* 账户管理界面 */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17FA41D06C9AE00F6AAA9 /* UserMangerController.h */,
+				C6C17FA51D06C9AE00F6AAA9 /* UserMangerController.m */,
+			);
+			name = "账户管理界面";
 			sourceTree = "<group>";
 		};
 		C6E7FF881D0520BA001FF0D4 /* 吃 */ = {
@@ -714,6 +775,8 @@
 			files = (
 				C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */,
 				C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */,
+				C6C17F9C1D06B44400F6AAA9 /* PleaseLoginController.xib in Resources */,
+				C6C17F9E1D06BC4E00F6AAA9 /* MineLogin.plist in Resources */,
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
 				C6E7FFAA1D055EEC001FF0D4 /* HomeController.xib in Resources */,
 				C6AB1A761D017EDA00066403 /* Controllers.plist in Resources */,
@@ -791,6 +854,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6AB1A711D0178E100066403 /* TabBarController.m in Sources */,
+				C6C17FA61D06C9AE00F6AAA9 /* UserMangerController.m in Sources */,
 				C6AB1A791D0181BB00066403 /* BaseViewController.m in Sources */,
 				C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */,
 				C6AB1A901D018A1700066403 /* LifeController.m in Sources */,
@@ -803,6 +867,8 @@
 				C6AB1A8A1D0189FE00066403 /* HeartController.m in Sources */,
 				C64CD2441D0121760050D58E /* main.m in Sources */,
 				C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */,
+				C6C17F9B1D06B44400F6AAA9 /* PleaseLoginController.m in Sources */,
+				C6C17FA21D06BFA000F6AAA9 /* MineLoginController.m in Sources */,
 				C6E7FFB01D05723C001FF0D4 /* ForumController.m in Sources */,
 				C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */,
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,

@@ -33,6 +33,7 @@
         publishButton.size = publishButton.currentBackgroundImage.size;
         [self addSubview:publishButton];
         self.publishButton = publishButton;
+        self.backgroundColor = RGB(255, 255, 255);
     }
     
     return self;

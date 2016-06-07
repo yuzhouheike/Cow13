@@ -64,7 +64,8 @@
     
      self.selectedIndex = 3;//默认就是0
     
-    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
+//    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
+    self.tabBar.backgroundColor = RGB(255, 255, 255);
     
     [self setValue:[CustomTabbar new] forKey:@"tabBar"];
 }

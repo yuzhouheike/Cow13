@@ -1,17 +1,19 @@
 //
-//  MineController.m
+//  MineLoginController.m
 //  Cow13
 //
-//  Created by 王磊磊 on 16/6/3.
+//  Created by 王磊磊 on 16/6/7.
 //  Copyright © 2016年 风暴科技. All rights reserved.
 //
 
-#import "MineController.h"
+#import "MineLoginController.h"
 #import "MineModel.h"
 #import "PleaseLoginController.h"
-static BOOL isLogin = NO;
 
-@interface MineController ()<UITableViewDelegate, UITableViewDataSource>
+static BOOL isLogin = YES;
+
+@interface MineLoginController ()<UITableViewDataSource, UITableViewDelegate>
+
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -20,20 +22,18 @@ static BOOL isLogin = NO;
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, strong) UIView *sectionFootView;
 
+
 @end
 
-@implementation MineController
+@implementation MineLoginController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  
-    if (!isLogin) {
+    
+
         [self setUpTableView];
-    } else {
-        
-        NSLog(@"退出" );
-    }
+
     
 }
 
@@ -43,13 +43,12 @@ static BOOL isLogin = NO;
     
     if (!_headView) {
         _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
-        _headView.backgroundColor = defaultBcakgroundcolor;
+        _headView.backgroundColor = RandomColor;
         
-   
+        
         
         UIButton *pleaseLoginImage = [UIButton  buttonWithType:UIButtonTypeSystem];
-        [pleaseLoginImage setBackgroundImage:[UIImage imageNamed:@"登陆注册"] forState:UIControlStateNormal];
-        pleaseLoginImage.backgroundColor = [UIColor whiteColor];
+        [pleaseLoginImage setBackgroundImage:[UIImage imageNamed:@"icon1"] forState:UIControlStateNormal];
         pleaseLoginImage.frame = CGRectMake(10, 10, 80, 80);
         pleaseLoginImage.userInteractionEnabled = YES;
         pleaseLoginImage.layer.cornerRadius = 40;
@@ -58,10 +57,19 @@ static BOOL isLogin = NO;
         
         UIButton *pleaseLogin = [UIButton buttonWithType:UIButtonTypeSystem];
         [pleaseLogin setFrame:CGRectMake(100, 25, 100, 50)];
-        [pleaseLogin setTitle:@"登录/注册" forState:UIControlStateNormal];
+        [pleaseLogin setTitle:@"宇宙黑客" forState:UIControlStateNormal];
         pleaseLogin.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
         [pleaseLogin setTitleColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:1] forState:UIControlStateNormal];
         [pleaseLogin addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIButton *userManger = [UIButton buttonWithType:UIButtonTypeSystem];
+        [userManger setTitle:@"账户管理" forState:UIControlStateNormal];
+        [userManger setTitle:@"账户管理" forState:UIControlStateHighlighted];
+        [userManger setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [userManger setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        userManger.frame = CGRectMake(self.view.width - 100, 25, 100, 50);
+        [userManger addTarget:self action:@selector(userMangerMethod) forControlEvents:UIControlEventTouchUpInside];
+        [_headView addSubview:userManger];
         [_headView addSubview:pleaseLogin];
         [_headView addSubview:pleaseLoginImage];
     }
@@ -96,7 +104,7 @@ static BOOL isLogin = NO;
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     isLogin = !isLogin;
-
+    
     if (isLogin) {
         [self setUpTableView];
     } else {
@@ -105,14 +113,14 @@ static BOOL isLogin = NO;
     }
 }
 
-#pragma setUpTableView 
+#pragma setUpTableView
 
 - (void) setUpTableView {
     
     [self.view addSubview:self.tableView];
 }
 
-#pragma dataList 
+#pragma dataList
 
 - (NSArray *)dataList {
     
@@ -132,7 +140,7 @@ static BOOL isLogin = NO;
     
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-//        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellMineID"];
+        //        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellMineID"];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = self.headView;
@@ -172,7 +180,7 @@ static BOOL isLogin = NO;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-   
+    
     return cell;
 }
 
@@ -193,7 +201,7 @@ static BOOL isLogin = NO;
     UIView *blackLine = [[UIView alloc] initWithFrame:CGRectMake(20, 0, self.view.width - 40, 1)];
     blackLine.backgroundColor = defaultBcakgroundcolor;
     CGFloat kMargin = 30;
-
+    CGFloat x = 0;
     CGFloat y = 5;
     CGFloat width = (self.view.width - 5 * kMargin) / 4.0;
     CGFloat height = width;
@@ -230,6 +238,20 @@ static BOOL isLogin = NO;
     NSLog(@"情输入密码");
     
     [self.navigationController pushViewController:[PleaseLoginController new] animated:YES];
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (void) userMangerMethod {
+    
+    NSLog(@"用户管理");
 }
 
 @end
