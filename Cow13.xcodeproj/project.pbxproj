@@ -43,6 +43,10 @@
 		C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFB51D057292001FF0D4 /* PreferentialController.m */; };
 		C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFBB1D0572C9001FF0D4 /* CustomServiceController.m */; };
 		C6E7FFC21D057376001FF0D4 /* MultitedChipController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6E7FFC11D057376001FF0D4 /* MultitedChipController.m */; };
+		C6EF6CAF1D07CBA600B57A22 /* PublichController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EF6CAD1D07CBA600B57A22 /* PublichController.m */; };
+		C6EF6CB01D07CBA600B57A22 /* PublichController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EF6CAE1D07CBA600B57A22 /* PublichController.xib */; };
+		C6EF6CB41D0815BF00B57A22 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EF6CB21D0815BF00B57A22 /* TableViewCell.m */; };
+		C6EF6CB51D0815BF00B57A22 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6EF6CB31D0815BF00B57A22 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,12 @@
 		C6E7FFBB1D0572C9001FF0D4 /* CustomServiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomServiceController.m; sourceTree = "<group>"; };
 		C6E7FFC01D057376001FF0D4 /* MultitedChipController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultitedChipController.h; sourceTree = "<group>"; };
 		C6E7FFC11D057376001FF0D4 /* MultitedChipController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultitedChipController.m; sourceTree = "<group>"; };
+		C6EF6CAC1D07CBA600B57A22 /* PublichController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublichController.h; sourceTree = "<group>"; };
+		C6EF6CAD1D07CBA600B57A22 /* PublichController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublichController.m; sourceTree = "<group>"; };
+		C6EF6CAE1D07CBA600B57A22 /* PublichController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublichController.xib; sourceTree = "<group>"; };
+		C6EF6CB11D0815BF00B57A22 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		C6EF6CB21D0815BF00B57A22 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		C6EF6CB31D0815BF00B57A22 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E2E7EAA441251EAE0A9CAE29 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -236,17 +246,9 @@
 		C64CD2761D012EE00050D58E /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				C6EF6CA91D07A8FF00B57A22 /* Systemcommon */,
 				C6C17F8C1D05AE0E00F6AAA9 /* others */,
 				C6C17F871D05AB8F00F6AAA9 /* added */,
-				C64CD2451D0121760050D58E /* AppDelegate.h */,
-				C64CD2461D0121760050D58E /* AppDelegate.m */,
-				C6AB1A721D017C9500066403 /* NavigationController.h */,
-				C6AB1A731D017C9500066403 /* NavigationController.m */,
-				C6AB1A6F1D0178E100066403 /* TabBarController.h */,
-				C6AB1A701D0178E100066403 /* TabBarController.m */,
-				C6AB1A771D0181BB00066403 /* BaseViewController.h */,
-				C6AB1A781D0181BB00066403 /* BaseViewController.m */,
-				C6AB1A751D017EDA00066403 /* Controllers.plist */,
 				C6E7FF901D054244001FF0D4 /* 首页 */,
 				C6E7FF921D05576E001FF0D4 /* 领域 */,
 				C6E7FF911D05427B001FF0D4 /* 消息 */,
@@ -390,6 +392,9 @@
 			isa = PBXGroup;
 			children = (
 				C6C17F881D05ABA000F6AAA9 /* View */,
+				C6EF6CAC1D07CBA600B57A22 /* PublichController.h */,
+				C6EF6CAD1D07CBA600B57A22 /* PublichController.m */,
+				C6EF6CAE1D07CBA600B57A22 /* PublichController.xib */,
 			);
 			name = added;
 			sourceTree = "<group>";
@@ -397,8 +402,6 @@
 		C6C17F881D05ABA000F6AAA9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6C17F891D05ABD700F6AAA9 /* CustomTabbar.h */,
-				C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -561,6 +564,9 @@
 		C6E7FF9E1D055872001FF0D4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C6EF6CB11D0815BF00B57A22 /* TableViewCell.h */,
+				C6EF6CB21D0815BF00B57A22 /* TableViewCell.m */,
+				C6EF6CB31D0815BF00B57A22 /* TableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -663,6 +669,24 @@
 			children = (
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		C6EF6CA91D07A8FF00B57A22 /* Systemcommon */ = {
+			isa = PBXGroup;
+			children = (
+				C6C17F891D05ABD700F6AAA9 /* CustomTabbar.h */,
+				C6C17F8A1D05ABD700F6AAA9 /* CustomTabbar.m */,
+				C6AB1A721D017C9500066403 /* NavigationController.h */,
+				C6AB1A731D017C9500066403 /* NavigationController.m */,
+				C6AB1A6F1D0178E100066403 /* TabBarController.h */,
+				C6AB1A701D0178E100066403 /* TabBarController.m */,
+				C6AB1A771D0181BB00066403 /* BaseViewController.h */,
+				C6AB1A781D0181BB00066403 /* BaseViewController.m */,
+				C6AB1A751D017EDA00066403 /* Controllers.plist */,
+				C64CD2451D0121760050D58E /* AppDelegate.h */,
+				C64CD2461D0121760050D58E /* AppDelegate.m */,
+			);
+			name = Systemcommon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -774,8 +798,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6E7FF8F1D05227B001FF0D4 /* You.plist in Resources */,
+				C6EF6CB51D0815BF00B57A22 /* TableViewCell.xib in Resources */,
 				C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */,
 				C6C17F9C1D06B44400F6AAA9 /* PleaseLoginController.xib in Resources */,
+				C6EF6CB01D07CBA600B57A22 /* PublichController.xib in Resources */,
 				C6C17F9E1D06BC4E00F6AAA9 /* MineLogin.plist in Resources */,
 				C64CD24F1D0121760050D58E /* Assets.xcassets in Resources */,
 				C6E7FFAA1D055EEC001FF0D4 /* HomeController.xib in Resources */,
@@ -856,6 +882,7 @@
 				C6AB1A711D0178E100066403 /* TabBarController.m in Sources */,
 				C6C17FA61D06C9AE00F6AAA9 /* UserMangerController.m in Sources */,
 				C6AB1A791D0181BB00066403 /* BaseViewController.m in Sources */,
+				C6EF6CAF1D07CBA600B57A22 /* PublichController.m in Sources */,
 				C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */,
 				C6AB1A901D018A1700066403 /* LifeController.m in Sources */,
 				C6C17F941D06601700F6AAA9 /* MineModel.m in Sources */,
@@ -874,6 +901,7 @@
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,
 				C6AB1A7B1D0185DF00066403 /* Foundation+Log.m in Sources */,
 				C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */,
+				C6EF6CB41D0815BF00B57A22 /* TableViewCell.m in Sources */,
 				C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */,
 				C6E7FFA91D055EEC001FF0D4 /* HomeController.m in Sources */,
 				C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */,

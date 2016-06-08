@@ -44,9 +44,9 @@
         
         viewController.navigationItem.title = dict[@"ControllerTitle"];
         
-        viewController.tabBarItem.selectedImage = [[UIImage imageNamed:dict[@"TabbarSelectImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        viewController.tabBarItem.selectedImage = [[UIImage imageNamed:dict[@"TabbarDiselectImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
-        viewController.tabBarItem.image = [[UIImage imageNamed:dict[@"TabbarDiselectImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        viewController.tabBarItem.image = [[UIImage imageNamed:dict[@"TabbarSelectImage"]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         
         NavigationController *navigationtroller = [[NavigationController alloc] initWithRootViewController:viewController];
         
@@ -62,7 +62,7 @@
     
     self.viewControllers = controllersArray;
     
-     self.selectedIndex = 3;//默认就是0
+     self.selectedIndex = 1;//默认就是0
     
 //    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbarback"];
     self.tabBar.backgroundColor = RGB(255, 255, 255);

@@ -7,8 +7,8 @@
 //
 
 #import "CustomTabbar.h"
-
-
+#import "PublichController.h"
+#import "NavigationController.h"
 @interface CustomTabbar ()
 
 /** 发布按钮 */
@@ -42,6 +42,19 @@
 - (void) publishClick {
     
     NSLog(@"%@", @"++++");
+    
+    
+    PublichController *postWord = [[PublichController alloc] init];
+//    NavigationController *nav = [NavigationController alloc] initWithRootViewController:postWord];
+    
+    NavigationController *nav = [[NavigationController alloc] initWithRootViewController:postWord];
+    
+//    // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
+//    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
+//    [root presentViewController:nav animated:YES completion:nil];
+//    
+//
+    
 }
 
 - (void)layoutSubviews
@@ -55,7 +68,7 @@
     CGFloat height = self.height;
     
     // 设置发布按钮的frame
-    self.publishButton.center = CGPointMake(width * 0.5, height * 0.5);
+    self.publishButton.center = CGPointMake(width * 0.5, height * 0.2);
     
     // 设置其他UITabBarButton的frame
     CGFloat buttonY = 0;

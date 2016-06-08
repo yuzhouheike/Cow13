@@ -7,16 +7,24 @@
 //
 
 #import "MessageController.h"
+#import "TableViewCell.h"
+@interface MessageController ()<UITableViewDelegate, UITableViewDataSource>
 
-@interface MessageController ()
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *array;
+
 
 @end
 
 @implementation MessageController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +32,82 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSArray *)array {
+    
+    if (!_array) {
+        _array = @[@"评论",@"留言",@"我的赞"
+                   ];
+    }
+    
+    return _array;
 }
-*/
+
+- (UITableView *)tableView {
+    
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        _tableView.backgroundColor = [UIColor clearColor];
+        
+    }
+    
+    return _tableView;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *blackView = [[UIView alloc] init];
+    
+    if (section!=2) {
+        
+        blackView.bounds = CGRectMake(0, 0, self.view.width, 2);
+        
+        blackView.backgroundColor = [UIColor blackColor];
+    }
+
+    
+    return blackView;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 80;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return self.array.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    if (!cell) {
+        cell = [[TableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cellID"];
+        
+        cell.textLabel.text = self.array[indexPath.section];
+//        cell.black.frame = CGRectMake(0, 0, self.view.width, 20);
+//        cell.black.backgroundColor = [UIColor redColor];
+        cell.imageView.image = [UIImage imageNamed:self.array[indexPath.section]];
+        cell.backgroundColor = RGB(208, 208, 208);
+        
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+    }
+    
+    return cell;
+}
+
+
 
 @end

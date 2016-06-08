@@ -16,7 +16,7 @@
 		<key>ControllerName</key>
 		<string>FieldController</string>
 		<key>ControllerTitle</key>
-		<string>领域</string>
+		<string></string>
 		<key>TabbarSelectImage</key>
 		<string>领域选中</string>
 		<key>TabbarDiselectImage</key>

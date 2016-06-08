@@ -60,7 +60,7 @@ static BOOL isLogin = NO;
         [pleaseLogin setFrame:CGRectMake(100, 25, 100, 50)];
         [pleaseLogin setTitle:@"登录/注册" forState:UIControlStateNormal];
         pleaseLogin.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
-        [pleaseLogin setTitleColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:1] forState:UIControlStateNormal];
+        [pleaseLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [pleaseLogin addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
         [_headView addSubview:pleaseLogin];
         [_headView addSubview:pleaseLoginImage];
@@ -69,13 +69,22 @@ static BOOL isLogin = NO;
     return _headView;
 }
 
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    return 20;
+//}
 
 #pragma mark 尾部 高度
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return 70;
     }
-    return 5;
+    return 1;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    return 4;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -164,7 +173,7 @@ static BOOL isLogin = NO;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellMineID"];
         MineModel *model = self.dataList[indexPath.section][indexPath.row];
         
-        
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;//cell select style
         cell.textLabel.text = model.title;
         cell.detailTextLabel.text = model.desc;
@@ -212,8 +221,7 @@ static BOOL isLogin = NO;
             
             button.titleEdgeInsets = UIEdgeInsetsMake(30, -20, 0, 0);
             
-            
-            button.titleLabel.font = [UIFont systemFontOfSize:12];
+            button.titleLabel.font = [UIFont systemFontOfSize:11];
             
             button.tag = 100 + i;
             [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
