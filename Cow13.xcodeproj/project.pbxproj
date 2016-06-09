@@ -14,6 +14,10 @@
 		C64CD2521D0121760050D58E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C64CD2501D0121760050D58E /* LaunchScreen.storyboard */; };
 		C64CD25D1D0121770050D58E /* Cow13Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD25C1D0121770050D58E /* Cow13Tests.m */; };
 		C64CD2681D0121770050D58E /* Cow13UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C64CD2671D0121770050D58E /* Cow13UITests.m */; };
+		C6A2A0DB1D0965BD00C458A8 /* PlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A2A0DA1D0965BD00C458A8 /* PlayController.m */; };
+		C6A2A0DF1D0965E700C458A8 /* WorkController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A2A0DE1D0965E700C458A8 /* WorkController.m */; };
+		C6A2A0E41D09662100C458A8 /* UsingController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A2A0E31D09662100C458A8 /* UsingController.m */; };
+		C6A2A0E71D09665200C458A8 /* HelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6A2A0E61D09665200C458A8 /* HelpController.m */; };
 		C6AB1A711D0178E100066403 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A701D0178E100066403 /* TabBarController.m */; };
 		C6AB1A741D017C9500066403 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6AB1A731D017C9500066403 /* NavigationController.m */; };
 		C6AB1A761D017EDA00066403 /* Controllers.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6AB1A751D017EDA00066403 /* Controllers.plist */; };
@@ -83,6 +87,14 @@
 		C64CD2671D0121770050D58E /* Cow13UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cow13UITests.m; sourceTree = "<group>"; };
 		C64CD2691D0121770050D58E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C64CD2751D012DDE0050D58E /* Cow13.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cow13.pch; sourceTree = "<group>"; };
+		C6A2A0D91D0965BD00C458A8 /* PlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayController.h; sourceTree = "<group>"; };
+		C6A2A0DA1D0965BD00C458A8 /* PlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayController.m; sourceTree = "<group>"; };
+		C6A2A0DD1D0965E700C458A8 /* WorkController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkController.h; sourceTree = "<group>"; };
+		C6A2A0DE1D0965E700C458A8 /* WorkController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkController.m; sourceTree = "<group>"; };
+		C6A2A0E21D09662100C458A8 /* UsingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsingController.h; sourceTree = "<group>"; };
+		C6A2A0E31D09662100C458A8 /* UsingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsingController.m; sourceTree = "<group>"; };
+		C6A2A0E51D09665200C458A8 /* HelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpController.h; sourceTree = "<group>"; };
+		C6A2A0E61D09665200C458A8 /* HelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpController.m; sourceTree = "<group>"; };
 		C6AB1A6F1D0178E100066403 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		C6AB1A701D0178E100066403 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		C6AB1A721D017C9500066403 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -270,6 +282,42 @@
 			name = support;
 			sourceTree = "<group>";
 		};
+		C6A2A0D81D09659300C458A8 /* 玩 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A2A0D91D0965BD00C458A8 /* PlayController.h */,
+				C6A2A0DA1D0965BD00C458A8 /* PlayController.m */,
+			);
+			name = "玩";
+			sourceTree = "<group>";
+		};
+		C6A2A0DC1D0965D800C458A8 /* 劳 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A2A0DD1D0965E700C458A8 /* WorkController.h */,
+				C6A2A0DE1D0965E700C458A8 /* WorkController.m */,
+			);
+			name = "劳";
+			sourceTree = "<group>";
+		};
+		C6A2A0E01D0965F800C458A8 /* 用 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A2A0E21D09662100C458A8 /* UsingController.h */,
+				C6A2A0E31D09662100C458A8 /* UsingController.m */,
+			);
+			name = "用";
+			sourceTree = "<group>";
+		};
+		C6A2A0E11D09661000C458A8 /* 帮 */ = {
+			isa = PBXGroup;
+			children = (
+				C6A2A0E51D09665200C458A8 /* HelpController.h */,
+				C6A2A0E61D09665200C458A8 /* HelpController.m */,
+			);
+			name = "帮";
+			sourceTree = "<group>";
+		};
 		C6AB1A631D016FE400066403 /* 个人中心 */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +336,10 @@
 		C6AB1A641D016FEF00066403 /* 懂你 */ = {
 			isa = PBXGroup;
 			children = (
+				C6A2A0E11D09661000C458A8 /* 帮 */,
+				C6A2A0E01D0965F800C458A8 /* 用 */,
+				C6A2A0DC1D0965D800C458A8 /* 劳 */,
+				C6A2A0D81D09659300C458A8 /* 玩 */,
 				C6E7FF881D0520BA001FF0D4 /* 吃 */,
 				C6AB1A6C1D01706D00066403 /* View */,
 				C6AB1A6B1D01706600066403 /* Model */,
@@ -882,6 +934,7 @@
 				C6AB1A711D0178E100066403 /* TabBarController.m in Sources */,
 				C6C17FA61D06C9AE00F6AAA9 /* UserMangerController.m in Sources */,
 				C6AB1A791D0181BB00066403 /* BaseViewController.m in Sources */,
+				C6A2A0E71D09665200C458A8 /* HelpController.m in Sources */,
 				C6EF6CAF1D07CBA600B57A22 /* PublichController.m in Sources */,
 				C6E7FFA11D055886001FF0D4 /* MessageController.m in Sources */,
 				C6AB1A901D018A1700066403 /* LifeController.m in Sources */,
@@ -892,17 +945,20 @@
 				C64CD2471D0121760050D58E /* AppDelegate.m in Sources */,
 				C6C17F8B1D05ABD700F6AAA9 /* CustomTabbar.m in Sources */,
 				C6AB1A8A1D0189FE00066403 /* HeartController.m in Sources */,
+				C6A2A0DB1D0965BD00C458A8 /* PlayController.m in Sources */,
 				C64CD2441D0121760050D58E /* main.m in Sources */,
 				C6E7FFB61D057292001FF0D4 /* PreferentialController.m in Sources */,
 				C6C17F9B1D06B44400F6AAA9 /* PleaseLoginController.m in Sources */,
 				C6C17FA21D06BFA000F6AAA9 /* MineLoginController.m in Sources */,
 				C6E7FFB01D05723C001FF0D4 /* ForumController.m in Sources */,
 				C6E7FF8B1D0520D2001FF0D4 /* EatController.m in Sources */,
+				C6A2A0DF1D0965E700C458A8 /* WorkController.m in Sources */,
 				C6AB1A931D018A2D00066403 /* MineController.m in Sources */,
 				C6AB1A7B1D0185DF00066403 /* Foundation+Log.m in Sources */,
 				C6C17F8F1D05AE4200F6AAA9 /* UIView+Extention.m in Sources */,
 				C6EF6CB41D0815BF00B57A22 /* TableViewCell.m in Sources */,
 				C6E7FF9C1D055852001FF0D4 /* FieldController.m in Sources */,
+				C6A2A0E41D09662100C458A8 /* UsingController.m in Sources */,
 				C6E7FFA91D055EEC001FF0D4 /* HomeController.m in Sources */,
 				C6E7FFBC1D0572C9001FF0D4 /* CustomServiceController.m in Sources */,
 				C6AB1A971D01B8EF00066403 /* HeartScrollController.m in Sources */,

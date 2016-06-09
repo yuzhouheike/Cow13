@@ -9,7 +9,7 @@
 #import "YouController.h"
 #import "SDCycleScrollView.h"
 #import "EatController.h"
-
+#import "UIImageView+WebCache.h"
 @interface YouController ()<SDCycleScrollViewDelegate>
 // button 吃 玩 劳 用 帮
 @property (nonatomic, strong) UIButton *button;
@@ -25,7 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = RandomColor;
     
     [self setupUI];
     
@@ -62,30 +61,20 @@
 
 - (void) doAction:(UIButton *)button {
     
-    
-//    NSLog(@"%@ title : %@", @(button.tag), button.titleLabel.text);
-    
-//      = [NSMutableArray arrayWithCapacity:self.controllersArray.count];
-    
-  
-    NSLog(@"%ld", button.tag);
-    
-    
-//    [self.navigationController pushViewController:(self.array[button.tag] - 100) animated:YES];
-    
-    
-//    [self.navigationController pushViewController:controllersArray[button.tag - 100] animated:YES];
-   
-   
 
+    
+    NSArray *controllersArray = @[@"EatController", @"PlayController", @"WorkController", @"UsingController", @"HelpController"];
+    
+    [self.navigationController pushViewController:[NSClassFromString(controllersArray[button.tag - 100]) new] animated:YES];
+    
 }
 
 #pragma 设置UI界面 吃 玩 劳 用 帮
 - (void) setupUI {
     
     
-    NSArray *titleArray = @[@"吃", @"玩", @"劳", @"用", @"帮"];
-    NSArray *backgroundImage = @[@"背景图片", @"背景图片", @"背景图片", @"背景图片",@"背景图片"];
+    NSArray *titleArray = @[@"吃", @"玩", @"仕", @"用", @"帮"];
+//    NSArray *backgroundImage = @[@"背景图片"];
     
     for (NSInteger index = 0 ; index < 5 ; index ++) {
         
@@ -93,18 +82,18 @@
         
         CGFloat height = (CGRectGetHeight(self.view.bounds) - 20 -64 ) / 5.0;
         
-        button.frame = CGRectMake(0, index * height, CGRectGetWidth(self.view.bounds), height);
+        button.frame = CGRectMake(0, index * height, CGRectGetWidth(self.view.bounds), height - 10);
         button.tag = index + 100;
         
         button.titleLabel.font = [UIFont systemFontOfSize:50];
         
-        [button setTitleColor:RandomColor forState:UIControlStateNormal];
+        button.backgroundColor = defaultBcakgroundcolor;
         
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
         
-        NSString *imageName = backgroundImage[index];
+//        NSString *imageName = backgroundImage[index];
         
-        [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+//        [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchUpInside];
         
         [self.view addSubview:button];

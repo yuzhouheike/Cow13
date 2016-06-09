@@ -24,5 +24,5 @@
 #define VIEW_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 #define VIEW_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define Rect(x, y, w, h)                    CGRectMake(x, y, w, h)
-
+#import "SDCycleScrollView.h"
 #endif /* Cow13_pch */

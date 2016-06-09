@@ -282,6 +282,8 @@ static CGFloat kButtonMargin = 10;
         _technologyButton.size = CGSizeMake(buttonLength, buttonLength);
        
         _technologyButton.center = self.point;
+        
+        [_technologyButton addTarget:self action:@selector(publicMethod:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return _technologyButton;
@@ -293,7 +295,7 @@ static CGFloat kButtonMargin = 10;
         
         
         _requireButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
+        _requireButton.titleEdgeInsets = UIEdgeInsetsMake(buttonLength, 0, 0, 0);
         [_requireButton setTitle:@"发布需求" forState:UIControlStateNormal];
         [_requireButton setTitle:@"发布需求" forState:UIControlStateHighlighted];
         [_requireButton setBackgroundImage:[UIImage imageNamed:@"发布需求"] forState:UIControlStateNormal];
@@ -301,6 +303,7 @@ static CGFloat kButtonMargin = 10;
         _requireButton.layer.cornerRadius = buttonLength / 2.0;
         _requireButton.size = CGSizeMake(buttonLength, buttonLength);
         _requireButton.center = self.point;
+        [_requireButton addTarget:self action:@selector(publicMethod:) forControlEvents:UIControlEventTouchUpInside];
 
     }
     return _requireButton;
@@ -309,7 +312,7 @@ static CGFloat kButtonMargin = 10;
 - (UIButton *)productButton {
     if (!_productButton) {
         _productButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
+        _productButton.titleEdgeInsets = UIEdgeInsetsMake(buttonLength, 0, 0, 0);
         [_productButton setTitle:@"发布产品" forState:UIControlStateNormal];
         [_productButton setTitle:@"发布产品" forState:UIControlStateHighlighted];
         [_productButton setBackgroundImage:[UIImage imageNamed:@"发布产品"] forState:UIControlStateNormal];
@@ -318,10 +321,15 @@ static CGFloat kButtonMargin = 10;
         _productButton.size = CGSizeMake(buttonLength, buttonLength);
         _productButton.center = self.publishButton.center;
         
+        [_productButton addTarget:self action:@selector(publicMethod:) forControlEvents:UIControlEventTouchUpInside];
+        
     }
     return _productButton;
 }
 
-
+- (void) publicMethod : (UIButton *) button {
+    
+    NSLog(@"%@", button.currentTitle);
+}
 
 @end
