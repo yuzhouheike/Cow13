@@ -11,7 +11,7 @@
 #import "NavigationController.h"
 #import "POP.h"
 static CGFloat buttonLength = 80;
-
+static CGFloat kButtonMargin = 10;
 @interface CustomTabbar ()
 
 /** 发布按钮 */
@@ -28,6 +28,9 @@ static CGFloat buttonLength = 80;
 @property (nonatomic, strong) UIButton *requireButton;
 @property (nonatomic, strong) UIButton *productButton;
 
+@property (nonatomic, assign) CGPoint point;
+
+
 @end
 
 @implementation CustomTabbar
@@ -39,6 +42,7 @@ static CGFloat buttonLength = 80;
 
         
         // 添加发布按钮
+        self.point = CGPointMake(212 - 24.5, 608.3 + 24.5);
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"publishicon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"pubishclickicon"] forState:UIControlStateHighlighted];
@@ -66,6 +70,8 @@ static CGFloat buttonLength = 80;
     
 }
 
+
+#pragma mark pop动画
 - (void) publishClick {
     
     
@@ -76,31 +82,98 @@ static CGFloat buttonLength = 80;
     
     
 
-    self.myView.alpha = 1;
+    self.myView.alpha = 0;
+
     
     [[UIApplication sharedApplication].keyWindow addSubview:self.myView];
 
+//         POPSpringAnimation *springAnimation = [POPSpringAnimation animation];
+   
     if (self.publishButton.selected == 1) {
         
-        self.myView.alpha = 0.5;
+        self.myView.alpha = 0.8;
+        
+        /**
+         *  发布技能
+         */
+         POPSpringAnimation *technologyAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.technologyButton];
+        technologyAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        technologyAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 300)];
+        self.technologyButton.backgroundColor = [UIColor orangeColor];
+        technologyAnim.springBounciness = 20;
+        technologyAnim.springSpeed = 20;
+        [self.technologyButton pop_addAnimation:technologyAnim forKey:@"center"];
         
         
-        [UIView animateWithDuration:1 animations:^{
-            
-            
-            
-            [[UIApplication sharedApplication].keyWindow addSubview:self.technologyButton];
-            self.technologyButton.x = 0;
-            self.technologyButton.y = 120;
+        /**
+         *  发布需求
+         */
+        POPSpringAnimation *requireAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.requireButton];
+        self.requireButton.backgroundColor = [UIColor orangeColor];
+        requireAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        requireAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 400)];
+        self.requireButton.backgroundColor = [UIColor orangeColor];
+        requireAnim.springBounciness = 20;
+        requireAnim.springSpeed = 20;
+        [self.requireButton pop_addAnimation:requireAnim forKey:@"center"];
         
-        }];
+        /**
+         *  发布产品
+         */
+        POPSpringAnimation *productAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.productButton];
+        self.productButton.backgroundColor = [UIColor orangeColor];
+        productAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        productAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 500)];
+        self.productButton.backgroundColor = [UIColor orangeColor];
+        productAnim.springBounciness = 20;
+        productAnim.springSpeed = 20;
+        [self.productButton pop_addAnimation:productAnim forKey:@"center"];
         
     } else {
         
+        POPSpringAnimation *technologyAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.technologyButton];
+        technologyAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        technologyAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 800)];
+        self.technologyButton.backgroundColor = [UIColor orangeColor];
+        technologyAnim.springBounciness = 20;
+        technologyAnim.springSpeed = 20;
+        [self.technologyButton pop_addAnimation:technologyAnim forKey:@"center"];
         
-        self.myView.alpha = 0;
         
+        /**
+         *  发布需求
+         */
+        POPSpringAnimation *requireAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.requireButton];
+        self.requireButton.backgroundColor = [UIColor orangeColor];
+        requireAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        requireAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 800)];
+        self.requireButton.backgroundColor = [UIColor orangeColor];
+        requireAnim.springBounciness = 20;
+        requireAnim.springSpeed = 20;
+        [self.requireButton pop_addAnimation:requireAnim forKey:@"center"];
         
+        /**
+         *  发布产品
+         */
+        POPSpringAnimation *productAnim = [POPSpringAnimation animation];
+        [self.myView addSubview:self.productButton];
+        self.productButton.backgroundColor = [UIColor orangeColor];
+        productAnim.property = [POPAnimatableProperty propertyWithName:kPOPViewCenter];
+        productAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(375/2.0, 800)];
+        self.productButton.backgroundColor = [UIColor orangeColor];
+        productAnim.springBounciness = 20;
+        productAnim.springSpeed = 20;
+        [self.productButton pop_addAnimation:productAnim forKey:@"center"];
+        
+
+        
+        self.alpha = 1;
+
     }
     
     
@@ -204,9 +277,11 @@ static CGFloat buttonLength = 80;
         [_technologyButton setTitle:@"发布技能" forState:UIControlStateHighlighted];
         [_technologyButton setBackgroundImage:[UIImage imageNamed:@"发布技能"] forState:UIControlStateNormal];
         [_technologyButton setBackgroundImage:[UIImage imageNamed:@"发布技能"] forState:UIControlStateHighlighted];
-        
+        _technologyButton.layer.cornerRadius = buttonLength / 2.0;
+        _technologyButton.titleEdgeInsets = UIEdgeInsetsMake(buttonLength, 0, 0, 0);
         _technologyButton.size = CGSizeMake(buttonLength, buttonLength);
-        
+       
+        _technologyButton.center = self.point;
     }
     
     return _technologyButton;
@@ -223,8 +298,9 @@ static CGFloat buttonLength = 80;
         [_requireButton setTitle:@"发布需求" forState:UIControlStateHighlighted];
         [_requireButton setBackgroundImage:[UIImage imageNamed:@"发布需求"] forState:UIControlStateNormal];
         [_requireButton setBackgroundImage:[UIImage imageNamed:@"发布需求"] forState:UIControlStateHighlighted];
-        
+        _requireButton.layer.cornerRadius = buttonLength / 2.0;
         _requireButton.size = CGSizeMake(buttonLength, buttonLength);
+        _requireButton.center = self.point;
 
     }
     return _requireButton;
@@ -238,12 +314,14 @@ static CGFloat buttonLength = 80;
         [_productButton setTitle:@"发布产品" forState:UIControlStateHighlighted];
         [_productButton setBackgroundImage:[UIImage imageNamed:@"发布产品"] forState:UIControlStateNormal];
         [_productButton setBackgroundImage:[UIImage imageNamed:@"发布产品"] forState:UIControlStateHighlighted];
-        
+        _productButton.layer.cornerRadius = buttonLength / 2.0;
         _productButton.size = CGSizeMake(buttonLength, buttonLength);
-        
+        _productButton.center = self.publishButton.center;
         
     }
     return _productButton;
 }
+
+
 
 @end

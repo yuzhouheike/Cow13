@@ -201,7 +201,6 @@ static BOOL isLogin = YES;
     UIView *blackLine = [[UIView alloc] initWithFrame:CGRectMake(20, 0, self.view.width - 40, 1)];
     blackLine.backgroundColor = defaultBcakgroundcolor;
     CGFloat kMargin = 30;
-    CGFloat x = 0;
     CGFloat y = 5;
     CGFloat width = (self.view.width - 5 * kMargin) / 4.0;
     CGFloat height = width;
