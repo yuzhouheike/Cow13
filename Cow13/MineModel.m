@@ -46,7 +46,6 @@
             model = [model initWithDict:dict];
             [dataMutableArray addObject:model];
             
-            NSLog(@"%@", model);
         }
         
         [mutableArray addObject:dataMutableArray];
@@ -58,7 +57,7 @@
 }
 
 - (void)setValuesForKeysWithDictionary:(NSDictionary<NSString *,id> *)keyedValues {
-    NSLog(@"++++++ - ---- --- -- - -");
+
 }
 
 - (NSString *)description

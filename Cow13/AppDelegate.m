@@ -24,7 +24,7 @@
     
     self.window.rootViewController = tabbar;
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor orangeColor];
     
     [self.window makeKeyAndVisible];
     

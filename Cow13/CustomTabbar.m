@@ -9,11 +9,24 @@
 #import "CustomTabbar.h"
 #import "PublichController.h"
 #import "NavigationController.h"
+#import "POP.h"
+static CGFloat buttonLength = 80;
+
 @interface CustomTabbar ()
 
 /** 发布按钮 */
 @property (nonatomic, weak) UIButton *publishButton;
 
+@property (nonatomic, strong) NSMutableArray *mutableButtonArray;
+
+@property (nonatomic, strong) NSArray *temp;
+
+// 蒙版效果
+@property (nonatomic, strong) UIView *myView;
+
+@property (nonatomic, strong) UIButton *technologyButton;
+@property (nonatomic, strong) UIButton *requireButton;
+@property (nonatomic, strong) UIButton *productButton;
 
 @end
 
@@ -23,38 +36,88 @@
     
     if(self = [super initWithFrame:frame]) {
         
-//        [self setBackgroundImage:[UIImage imageNamed:@"加号"]];
+
         
         // 添加发布按钮
         UIButton *publishButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"publishicon"] forState:UIControlStateNormal];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"pubishclickicon"] forState:UIControlStateHighlighted];
+        [publishButton setBackgroundImage:[UIImage imageNamed:@"pubishclickicon"] forState:UIControlStateSelected];
         [publishButton addTarget:self action:@selector(publishClick) forControlEvents:UIControlEventTouchUpInside];
+        
         publishButton.size = publishButton.currentBackgroundImage.size;
         [self addSubview:publishButton];
         self.publishButton = publishButton;
-        self.backgroundColor = RGB(255, 255, 255);
+//        self.backgroundColor = RGB(255, 255, 255);
+        self.backgroundColor = [UIColor blackColor];
     }
+    
+    
     
     return self;
 }
 
+- (NSArray *)temp {
+    
+    if (!_temp) {
+        _temp = @[@1,@0,@0,@0];
+    }
+    return _temp;
+    
+}
+
 - (void) publishClick {
     
-    NSLog(@"%@", @"++++");
     
     
-    PublichController *postWord = [[PublichController alloc] init];
-//    NavigationController *nav = [NavigationController alloc] initWithRootViewController:postWord];
+    self.publishButton.selected = !self.publishButton.selected;
     
-    NavigationController *nav = [[NavigationController alloc] initWithRootViewController:postWord];
     
-//    // 这里不能使用self来弹出其他控制器, 因为self执行了dismiss操作
-//    UIViewController *root = [UIApplication sharedApplication].keyWindow.rootViewController;
-//    [root presentViewController:nav animated:YES completion:nil];
-//    
-//
     
+    
+
+    self.myView.alpha = 1;
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:self.myView];
+
+    if (self.publishButton.selected == 1) {
+        
+        self.myView.alpha = 0.5;
+        
+        
+        [UIView animateWithDuration:1 animations:^{
+            
+            
+            
+            [[UIApplication sharedApplication].keyWindow addSubview:self.technologyButton];
+            self.technologyButton.x = 0;
+            self.technologyButton.y = 120;
+        
+        }];
+        
+    } else {
+        
+        
+        self.myView.alpha = 0;
+        
+        
+    }
+    
+    
+    
+  
+
+}
+
+- (UIView *)myView {
+    
+    if (!_myView) {
+        _myView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 44)];
+        _myView.backgroundColor = [UIColor blackColor];
+        
+      
+    }
+    return _myView;
 }
 
 - (void)layoutSubviews
@@ -85,26 +148,102 @@
         // 增加索引
         index++;
         
+        button.tag = 100 + index;
+        
         if (added == NO) {
             // 监听按钮点击
-            [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+            [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+            
+         
+            
+            [self.mutableButtonArray addObject:button];
+            
         }
     }
     
     added = YES;
 }
-- (void)buttonClick
+
+- (NSMutableArray *)mutableButtonArray {
+    
+    if (!_mutableButtonArray) {
+        _mutableButtonArray = [NSMutableArray array];
+        
+    }
+    
+    return _mutableButtonArray;
+}
+
+- (void)buttonClick:(UIButton *)button
 {
-//    // 发出一个通知
-//    NSLog(@"ceshi");
-//    [XMGNoteCenter postNotificationName:XMGTabBarDidSelectNotification object:nil userInfo:nil];
+
+    int index = (int)button.tag - 100 -1;
+    
+    
+    
+    for (NSInteger i = 0; i < 4 ; i ++) {
+        
+       UIButton *wll =  self.mutableButtonArray[i];
+        
+        if (index == i) {
+            wll.y = -10;
+        }else {
+            wll.y =0;
+        }
+    }
+    
+
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+
+- (UIButton *)technologyButton {
+    
+    if (!_technologyButton) {
+        _technologyButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [_technologyButton setTitle:@"发布技能" forState:UIControlStateNormal];
+        [_technologyButton setTitle:@"发布技能" forState:UIControlStateHighlighted];
+        [_technologyButton setBackgroundImage:[UIImage imageNamed:@"发布技能"] forState:UIControlStateNormal];
+        [_technologyButton setBackgroundImage:[UIImage imageNamed:@"发布技能"] forState:UIControlStateHighlighted];
+        
+        _technologyButton.size = CGSizeMake(buttonLength, buttonLength);
+        
+    }
+    
+    return _technologyButton;
 }
-*/
+
+- (UIButton *)requireButton {
+    if (!_requireButton) {
+        _requireButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        
+        _requireButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [_requireButton setTitle:@"发布需求" forState:UIControlStateNormal];
+        [_requireButton setTitle:@"发布需求" forState:UIControlStateHighlighted];
+        [_requireButton setBackgroundImage:[UIImage imageNamed:@"发布需求"] forState:UIControlStateNormal];
+        [_requireButton setBackgroundImage:[UIImage imageNamed:@"发布需求"] forState:UIControlStateHighlighted];
+        
+        _requireButton.size = CGSizeMake(buttonLength, buttonLength);
+
+    }
+    return _requireButton;
+}
+
+- (UIButton *)productButton {
+    if (!_productButton) {
+        _productButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        [_productButton setTitle:@"发布产品" forState:UIControlStateNormal];
+        [_productButton setTitle:@"发布产品" forState:UIControlStateHighlighted];
+        [_productButton setBackgroundImage:[UIImage imageNamed:@"发布产品"] forState:UIControlStateNormal];
+        [_productButton setBackgroundImage:[UIImage imageNamed:@"发布产品"] forState:UIControlStateHighlighted];
+        
+        _productButton.size = CGSizeMake(buttonLength, buttonLength);
+        
+        
+    }
+    return _productButton;
+}
 
 @end
