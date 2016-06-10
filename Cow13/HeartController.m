@@ -10,30 +10,68 @@
 #import "SDCycleScrollView.h"
 @interface HeartController ()<SDCycleScrollViewDelegate>
 
+// controllers的名字
+
+@property (nonatomic, strong) NSMutableArray *array;
+
 @end
 
 @implementation HeartController
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
-//    self.view.backgroundColor = RandomColor;
-//}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setupUI];
     
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSMutableArray *)array {
+    
+    if (!_array) {
+        _array = [NSMutableArray array];
+    }
+    return _array;
 }
-*/
+
+- (void) doAction:(UIButton *)button {
+    
+    
+    
+    NSArray *controllersArray = @[@"JiaoDian", @"LaiYue", @"PinDan"];
+    
+    [self.navigationController pushViewController:[NSClassFromString([NSString stringWithFormat:@"%@Controller", controllersArray[button.tag - 100]]) new] animated:YES];
+    
+}
+
+#pragma 设置UI界面 吃 玩 劳 用 帮
+- (void) setupUI {
+    
+    
+    NSArray *titleArray = @[@"Jiao 点", @"来 Yue", @"Pin 单"];
+    //    NSArray *backgroundImage = @[@"背景图片"];
+    
+    for (NSInteger index = 0 ; index < 3 ; index ++) {
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        CGFloat height = (CGRectGetHeight(self.view.bounds) - 20 -64 ) / 5.0;
+        
+        button.frame = CGRectMake(0, index * height, CGRectGetWidth(self.view.bounds), height - 10);
+        button.tag = index + 100;
+        
+        button.titleLabel.font = [UIFont systemFontOfSize:50];
+        
+        button.backgroundColor = [UIColor grayColor];
+        
+        [button setTitle:titleArray[index] forState:UIControlStateNormal];
+        
+        //        NSString *imageName = backgroundImage[index];
+        
+        //        [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:button];
+    }
+}
 
 @end

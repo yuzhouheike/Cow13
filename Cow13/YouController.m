@@ -87,7 +87,7 @@
         
         button.titleLabel.font = [UIFont systemFontOfSize:50];
         
-        button.backgroundColor = defaultBcakgroundcolor;
+        button.backgroundColor = [UIColor grayColor];
         
         [button setTitle:titleArray[index] forState:UIControlStateNormal];
         

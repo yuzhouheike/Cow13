@@ -9,19 +9,20 @@
 #import "FieldController.h"
 #import "SDCycleScrollView.h"
 #import "MineModel.h"
+#import "CicleController.h"
+
 static CGFloat kWidth = 36;
 static CGFloat kMargin = 10;
 static NSString *identifier = @"collectionCellID";
 
-@interface FieldController ()<SDCycleScrollViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FieldController ()<SDCycleScrollViewDelegate>
 
 @property (nonatomic, strong) UIButton *findButton;
 @property (nonatomic, strong) UIButton *mineButton;
 @property (nonatomic, strong) UIButton *buttonView;
 @property (nonatomic, strong) UIView *lineView;
 
-@property (nonatomic, strong) UICollectionView * collectionView;
-@property (nonatomic, strong) NSArray * dataList;
+
 
 @property (nonatomic, strong) UIScrollView *scrollview;
 
@@ -38,8 +39,12 @@ static NSString *identifier = @"collectionCellID";
 
     [self setUpNav];
     
+    [self setUpUi];
     
-//    [self.view addSubview:self.collectionView];
+}
+
+- (void) setUpUi {
+    
     
     [self.view addSubview:self.scrollview];
     UILabel *lable = [[UILabel alloc] init];
@@ -62,8 +67,8 @@ static NSString *identifier = @"collectionCellID";
     
     [self.scrollview addSubview:lable2];
     NSArray *titleArray = @[@"吃喝Bang", @"颜值Jie", @"壕Quan", @"会玩Cheng", @"情感Ju", @"综艺Ka", @"科技Kong", @"文艺Fan", @"爱车Zu"];
-       NSArray *imageArray = @[@"吃喝", @"颜值", @"壕", @"会玩", @"情感", @"综艺", @"科技", @"文艺", @"爱车"];
- 
+    NSArray *imageArray = @[@"吃喝", @"颜值", @"壕", @"会玩", @"情感", @"综艺", @"科技", @"文艺", @"爱车"];
+    
     CGFloat x;
     CGFloat y;
     CGFloat width = (self.view.width - 4.0 * kMargin) / 3;
@@ -71,7 +76,7 @@ static NSString *identifier = @"collectionCellID";
     CGFloat height  = width;
     
     for (NSInteger i = 0; i < 6 ; i ++) {
-    
+        
         x = kMargin * (i + 1) + i * width;
         
         if (i < 3) {
@@ -79,7 +84,7 @@ static NSString *identifier = @"collectionCellID";
             
         } else {
             x = kMargin * (i % 3 + 1) + i % 3 * width;
-
+            
             y = lable2.y + lable2.height + 2 * kMargin + width + 50;
         }
         
@@ -96,8 +101,8 @@ static NSString *identifier = @"collectionCellID";
         [indexButton setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
         
         [indexButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-         indexButton.titleEdgeInsets = UIEdgeInsetsMake(100, -50, -35, 0);
-        
+        indexButton.titleEdgeInsets = UIEdgeInsetsMake(100, -50, -35, 0);
+        [indexButton addTarget:self action:@selector(ClickbuttonMethod:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollview addSubview:indexButton];
         
     }
@@ -143,9 +148,13 @@ static NSString *identifier = @"collectionCellID";
         [indexButton setImage:[UIImage imageNamed:imageArray[i]] forState:UIControlStateNormal];
         
         [indexButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        
+        [indexButton addTarget:self action:@selector(ClickbuttonMethod:) forControlEvents:UIControlEventTouchUpInside];
+        
         [self.scrollview addSubview:indexButton];
         
     }
+
 }
 
 - (UIScrollView *)scrollview {
@@ -159,13 +168,6 @@ static NSString *identifier = @"collectionCellID";
     return _scrollview;
 }
 
-- (NSArray *)dataList {
-    
-    if (!_dataList) {
-        _dataList = [MineModel dataList];
-    }
-    return _dataList;
-}
 
 - (void) setUpNav {
     
@@ -277,46 +279,12 @@ static NSString *identifier = @"collectionCellID";
 
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
+- (void) ClickbuttonMethod:(UIButton *)button {
     
-    return self.dataList.count;
-    
+    [self.navigationController pushViewController:[CicleController new] animated:YES];
 }
 
-// The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:identifier forIndexPath:indexPath];
-    
-
-    return cell;
-    
-}
-
-
-#pragma mark - collectionView
-
-- (UICollectionView *)collectionView {
-    
-    if (!_collectionView) {
-        
-        UICollectionViewFlowLayout * flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        
-        flowLayout.sectionInset = UIEdgeInsetsMake(kMargin, kMargin, kMargin, kMargin);
-        NSInteger itemWidth = (self.view.bounds.size.width - 3 * kMargin) / 2;
-        
-        flowLayout.itemSize = CGSizeMake(itemWidth, itemWidth / 0.618);
-        
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
-        _collectionView.dataSource = self;
-        _collectionView.delegate = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
-        [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:identifier];
-    }
-    
-    return _collectionView;
-}
 
 
 @end

@@ -108,6 +108,13 @@
     return cell;
 }
 
+#pragma mark 评论留言我的赞三个点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *array = @[@"CommentsController",@"LeveWorldController",@"MyPriseController"];
+    
+    [self.navigationController pushViewController:[NSClassFromString(array[indexPath.section]) new] animated:YES];
+}
 
 
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "EatController.h"
+#import "EatCell.h"
 
-@interface EatController ()<SDCycleScrollViewDelegate>
+
+@interface EatController ()<SDCycleScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+
+
 
 @end
 
@@ -20,7 +26,106 @@
     self.title = @"吃";
     [self setUpScrollViewImage];
     
+    [self.view addSubview:self.tableView];
+    
 }
+
+- (UITableView *)tableView {
+    
+    
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView.dataSource = self;
+        _tableView.delegate = self;
+        
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellcell"];
+        [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([EatCell class]) bundle:nil] forCellReuseIdentifier:@"cellID"];
+    }
+    
+    return _tableView;
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 如果你发现你的CycleScrollview会在viewWillAppear时图片卡在中间位置，你可以调用此方法调整图片位置
+    //    [你的CycleScrollview adjustWhenControllerViewWillAppera];
+}
+
+
+#pragma mark - SDCycleScrollViewDelegate
+
+// 滚动到第几张图回调
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    
+    [self.navigationController pushViewController:[NSClassFromString(@"HeartScrollController") new] animated:NO];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark tableView 
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 90;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return cellLines;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSArray *section = @[@"牛13-Box", @"零食-Ke", @"美食-Bom"];
+    
+    if (indexPath.row == 0) {
+        
+        
+        
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithFrame:self.view.bounds];
+        cell.textLabel.text = section[indexPath.section];
+        cell.textLabel.font = [UIFont systemFontOfSize:40];
+        cell.textLabel.textAlignment = NSTextAlignmentJustified;
+        cell.imageView.image = [UIImage imageNamed:@"爱车"];
+        ;
+        
+        return cell;
+        
+    } else{
+        
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+        
+        return cell;
+        
+    }
+
+}
+
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"%ld", indexPath.row);
+    
+    [self.navigationController pushViewController:[NSClassFromString(@"EatGoodsController") new] animated:YES];
+}
+
 - (void)setUpScrollViewImage {
     
     CGRect frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 190);
@@ -64,39 +169,5 @@
     
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    // 如果你发现你的CycleScrollview会在viewWillAppear时图片卡在中间位置，你可以调用此方法调整图片位置
-    //    [你的CycleScrollview adjustWhenControllerViewWillAppera];
-}
-
-
-#pragma mark - SDCycleScrollViewDelegate
-
-// 滚动到第几张图回调
-
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
-{
-    NSLog(@"---点击了第%ld张图片", (long)index);
-    
-    [self.navigationController pushViewController:[NSClassFromString(@"HeartScrollController") new] animated:NO];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

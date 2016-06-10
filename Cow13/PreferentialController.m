@@ -17,21 +17,50 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"福利";
+    [self setupUI];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+- (void) doAction:(UIButton *)button {
+    
+    
+    
+    NSArray *controllersArray = @[@"RobVolume",  @"SecondsKill" , @"LuckyDraw" ];
+    
+    [self.navigationController pushViewController:[NSClassFromString([NSString stringWithFormat:@"%@Controller", controllersArray[button.tag - 100]]) new] animated:YES];
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma 设置UI界面 吃 玩 劳 用 帮
+- (void) setupUI {
+    
+    
+    NSArray *titleArray = @[@"抢劵", @"秒杀", @"抽奖"];
+    
+    for (NSInteger index = 0 ; index < 3 ; index ++) {
+        
+        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+        
+        CGFloat height = (CGRectGetHeight(self.view.bounds) - 20 -64 ) / 5.0;
+        
+        button.frame = CGRectMake(0, index * height, CGRectGetWidth(self.view.bounds), height - 10);
+        button.tag = index + 100;
+        
+        button.titleLabel.font = [UIFont systemFontOfSize:50];
+        
+        button.backgroundColor = [UIColor grayColor];
+        
+        [button setTitle:titleArray[index] forState:UIControlStateNormal];
+        
+        //        NSString *imageName = backgroundImage[index];
+        
+        //        [button setBackgroundImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        [button addTarget:self action:@selector(doAction:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:button];
+    }
 }
-*/
-
 @end

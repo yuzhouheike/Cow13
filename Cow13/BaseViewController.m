@@ -42,8 +42,8 @@ static NSString * const BaseURLString = @"http://127.0.0.1/";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-#warning 全局背景颜色随机展示
-    self.view.backgroundColor = RGB(235, 235, 241);
+
+    self.view.backgroundColor = defaultBcakgroundcolor;
 }
 
 - (void)postDataFromSever:(NSString *)URL

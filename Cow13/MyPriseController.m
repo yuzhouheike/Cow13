@@ -1,22 +1,23 @@
 //
-//  ForumController.m
+//  MyPriseController.m
 //  Cow13
 //
-//  Created by 王磊磊 on 16/6/6.
+//  Created by 王磊磊 on 16/6/10.
 //  Copyright © 2016年 风暴科技. All rights reserved.
 //
 
-#import "ForumController.h"
+#import "MyPriseController.h"
 
-@interface ForumController ()
+@interface MyPriseController ()
 
 @end
 
-@implementation ForumController
+@implementation MyPriseController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
+    self.title = @"我的所有赞";
 }
 
 - (void)didReceiveMemoryWarning {

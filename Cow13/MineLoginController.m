@@ -32,7 +32,12 @@ static BOOL isLogin = YES;
     // Do any additional setup after loading the view.
     
 
+    if (isLogin) {
         [self setUpTableView];
+    } else {
+        
+        NSLog(@"退出" );
+    }
 
     
 }
@@ -43,7 +48,7 @@ static BOOL isLogin = YES;
     
     if (!_headView) {
         _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
-        _headView.backgroundColor = RandomColor;
+        _headView.backgroundColor = defaultBcakgroundcolor;
         
         
         
@@ -53,14 +58,14 @@ static BOOL isLogin = YES;
         pleaseLoginImage.userInteractionEnabled = YES;
         pleaseLoginImage.layer.cornerRadius = 40;
         pleaseLoginImage.layer.masksToBounds = YES;
-        [pleaseLoginImage addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
+        pleaseLoginImage.enabled = NO;
         
         UIButton *pleaseLogin = [UIButton buttonWithType:UIButtonTypeSystem];
         [pleaseLogin setFrame:CGRectMake(100, 25, 100, 50)];
         [pleaseLogin setTitle:@"宇宙黑客" forState:UIControlStateNormal];
         pleaseLogin.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
-        [pleaseLogin setTitleColor:[UIColor colorWithRed:255 green:255 blue:255 alpha:1] forState:UIControlStateNormal];
-        [pleaseLogin addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
+        [pleaseLogin setTitleColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:1] forState:UIControlStateNormal];
+        pleaseLogin.enabled = NO;
         
         UIButton *userManger = [UIButton buttonWithType:UIButtonTypeSystem];
         [userManger setTitle:@"账户管理" forState:UIControlStateNormal];
@@ -82,6 +87,8 @@ static BOOL isLogin = YES;
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return 70;
+    } else if (section == 5) {
+        return 200;
     }
     return 5;
 }
@@ -89,7 +96,15 @@ static BOOL isLogin = YES;
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return self.sectionFootView;
+    }else if (section == 5) {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 200)];
+        if (section == 5) {
+            
+            view.backgroundColor = defaultBcakgroundcolor;
+        }
+        return view;
     }
+
     
     return nil;
 }
@@ -98,6 +113,7 @@ static BOOL isLogin = YES;
     if (section == 0) {
         return self.headView;
     }
+    
     return nil;
 }
 
@@ -105,12 +121,7 @@ static BOOL isLogin = YES;
     
     isLogin = !isLogin;
     
-    if (isLogin) {
-        [self setUpTableView];
-    } else {
-        
-        NSLog(@"退出" );
-    }
+ 
 }
 
 #pragma setUpTableView
@@ -232,12 +243,6 @@ static BOOL isLogin = YES;
     return _sectionFootView;
 }
 
-- (void) turnToLogin {
-    
-    NSLog(@"情输入密码");
-    
-    [self.navigationController pushViewController:[PleaseLoginController new] animated:YES];
-}
 /*
 #pragma mark - Navigation
 
@@ -252,5 +257,9 @@ static BOOL isLogin = YES;
     
     NSLog(@"用户管理");
 }
+
+
+
+
 
 @end

@@ -22,6 +22,13 @@
     
     self.title = @"这是点进图片的视图控制器";
     
+//    self.navigationController.navigationItem.hidesBackButton = YES;
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

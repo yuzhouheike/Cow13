@@ -9,7 +9,8 @@
 #import "MineController.h"
 #import "MineModel.h"
 #import "PleaseLoginController.h"
-static BOOL isLogin = NO;
+
+//static BOOL isLogin = NO;
 
 @interface MineController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -28,12 +29,7 @@ static BOOL isLogin = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-    if (!isLogin) {
-        [self setUpTableView];
-    } else {
-        
-        NSLog(@"退出" );
-    }
+    [self setUpTableView];
     
 }
 
@@ -42,26 +38,29 @@ static BOOL isLogin = NO;
 - (UIView *)headView {
     
     if (!_headView) {
-        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 100)];
+        _headView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 120)];
+        
         _headView.backgroundColor = defaultBcakgroundcolor;
         
    
         
-        UIButton *pleaseLoginImage = [UIButton  buttonWithType:UIButtonTypeSystem];
+        UIButton *pleaseLoginImage = [UIButton  buttonWithType:UIButtonTypeCustom];
         [pleaseLoginImage setBackgroundImage:[UIImage imageNamed:@"登陆注册"] forState:UIControlStateNormal];
         pleaseLoginImage.backgroundColor = [UIColor whiteColor];
         pleaseLoginImage.frame = CGRectMake(10, 10, 80, 80);
-        pleaseLoginImage.userInteractionEnabled = YES;
+//        pleaseLoginImage.userInteractionEnabled = YES;
         pleaseLoginImage.layer.cornerRadius = 40;
         pleaseLoginImage.layer.masksToBounds = YES;
+        
         [pleaseLoginImage addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
         
-        UIButton *pleaseLogin = [UIButton buttonWithType:UIButtonTypeSystem];
+        UIButton *pleaseLogin = [UIButton buttonWithType:UIButtonTypeCustom];
         [pleaseLogin setFrame:CGRectMake(100, 25, 100, 50)];
         [pleaseLogin setTitle:@"登录/注册" forState:UIControlStateNormal];
         pleaseLogin.titleEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
         [pleaseLogin setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [pleaseLogin addTarget:self action:@selector(turnToLogin) forControlEvents:UIControlEventTouchUpInside];
+        
         [_headView addSubview:pleaseLogin];
         [_headView addSubview:pleaseLoginImage];
     }
@@ -69,15 +68,13 @@ static BOOL isLogin = NO;
     return _headView;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return 30;
-}
 
 #pragma mark 尾部 高度
 - (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return 70;
+    } else if(section == 5) {
+        return 200;
     }
     return 1;
 }
@@ -90,29 +87,27 @@ static BOOL isLogin = NO;
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return self.sectionFootView;
-    }
-    
-    return nil;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
-        return self.headView;
-    }
-    return nil;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    isLogin = !isLogin;
-
-    if (isLogin) {
-        [self setUpTableView];
-    } else {
+    } else if(section == 5) {
         
-        NSLog(@"退出" );
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 200)];
+        if (section == 5) {
+            
+            view.backgroundColor = defaultBcakgroundcolor;
+        }
+        return view;
     }
+    
+    return nil;
 }
+
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    if (section == 0) {
+//        return self.headView;
+//    }
+//    return nil;
+//}
+
+
 
 #pragma setUpTableView 
 
@@ -141,7 +136,7 @@ static BOOL isLogin = NO;
     
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-//        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellMineID"];
+
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableHeaderView = self.headView;
@@ -189,7 +184,7 @@ static BOOL isLogin = NO;
     
     MineModel *model = self.dataList[indexPath.section][indexPath.row];
     
-    NSLog(@"%@ title %@", @(indexPath.row), model.title);
+    NSLog(@"%@ title %@", @(indexPath.section), model.title);
 }
 
 #pragma mark sectionFootView 四个button一列
@@ -238,6 +233,7 @@ static BOOL isLogin = NO;
     NSLog(@"情输入密码");
     
     [self.navigationController pushViewController:[PleaseLoginController new] animated:YES];
+
 }
 
 @end

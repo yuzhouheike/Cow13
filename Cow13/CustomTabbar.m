@@ -11,7 +11,7 @@
 #import "NavigationController.h"
 #import "POP.h"
 static CGFloat buttonLength = 80;
-static CGFloat kButtonMargin = 10;
+
 @interface CustomTabbar ()
 
 /** 发布按钮 */
@@ -86,8 +86,6 @@ static CGFloat kButtonMargin = 10;
 
     
     [[UIApplication sharedApplication].keyWindow addSubview:self.myView];
-
-//         POPSpringAnimation *springAnimation = [POPSpringAnimation animation];
    
     if (self.publishButton.selected == 1) {
         
@@ -226,9 +224,7 @@ static CGFloat kButtonMargin = 10;
         if (added == NO) {
             // 监听按钮点击
             [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-            
-         
-            
+       
             [self.mutableButtonArray addObject:button];
             
         }
@@ -330,6 +326,20 @@ static CGFloat kButtonMargin = 10;
 - (void) publicMethod : (UIButton *) button {
     
     NSLog(@"%@", button.currentTitle);
+    
+    if ([button.currentTitle isEqualToString:@"发布技能" ]) {
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[NSClassFromString(@"TechnologyController") new
+                                                                                               ] animated:YES completion:nil];
+    } else if ([button.currentTitle isEqualToString:@"发布需求"]) {
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[NSClassFromString(@"RequireController") new
+                                                                                               ] animated:YES completion:nil];
+    } else if ([button.currentTitle isEqualToString:@"发布产品"]) {
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:[NSClassFromString(@"ProductController") new
+                                                                                               ] animated:YES completion:nil];
+    }
 }
+
+
 
 @end

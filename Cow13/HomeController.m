@@ -8,13 +8,15 @@
 
 #import "HomeController.h"
 #import "SDCycleScrollView.h"
+
 #import "YouController.h"
 #import "HeartController.h"
 #import "LifeController.h"
 #import "MultitedChipController.h"
 #import "CustomServiceController.h"
-#import "ForumController.h"
 #import "PreferentialController.h"
+
+#import "CicleController.h"
 
 @interface HomeController ()<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *You;
@@ -150,7 +152,8 @@
 - (IBAction)forum:(id)sender {
     
     
-    [self.navigationController pushViewController:[ForumController new] animated:NO];
+    [self.navigationController pushViewController:[MultitedChipController new] animated:NO];
+    
 }
 - (IBAction)preferential:(id)sender {
     
@@ -159,13 +162,14 @@
 }
 - (IBAction)customService:(id)sender {
     
+    [self.navigationController pushViewController:[CicleController new] animated:NO];
     
-    [self.navigationController pushViewController:[CustomServiceController new] animated:NO];
+
 }
 - (IBAction)multitudeChip:(id)sender {
     
-    
-    [self.navigationController pushViewController:[MultitedChipController new] animated:NO];
+    [self.navigationController pushViewController:[CustomServiceController new] animated:NO];
+
 }
 
 /*

@@ -33,6 +33,8 @@ typedef void (^errorBlock)(NSURLSessionDataTask *task,NSError *error);
  isSuccess:请求成功返回数据的block
  isError:请求失败返回原因的block
  */
+
+
 - (void)getDataFromSever:(NSString *)URL
                parameter:(NSDictionary *)parameter
                isSuccess:(successBlock)success

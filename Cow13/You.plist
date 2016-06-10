@@ -4,31 +4,31 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>吃</string>
+		<string>吃:是一种态度</string>
 		<key>controllerName</key>
 		<string>EatController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>玩</string>
+		<string>玩:得酷靠得住</string>
 		<key>controllerName</key>
 		<string>PlayController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>劳</string>
+		<string>仕:理想不放弃</string>
 		<key>controllerName</key>
 		<string>WorkController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>用</string>
+		<string>用:心品质如一</string>
 		<key>controllerName</key>
 		<string>UseController</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>帮</string>
+		<string>帮:年轻不沉沦</string>
 		<key>controllerName</key>
 		<string>HelpController</string>
 	</dict>
