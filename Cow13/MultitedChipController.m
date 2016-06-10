@@ -18,6 +18,7 @@
     [super viewDidLoad];
 
     self.title = @"重筹功能";
+    NSLog(@"测试下BitBucket");
 }
 
 - (void)didReceiveMemoryWarning {
